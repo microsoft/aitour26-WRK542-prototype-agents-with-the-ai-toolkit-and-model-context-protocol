@@ -22,7 +22,7 @@ class Store(Base):
     orders = relationship("Order", back_populates="store")
     inventory = relationship("Inventory", back_populates="store")
     order_items = relationship("OrderItem", back_populates="store")
-    customers = relationship("Customer", foreign_keys="Customer.primary_store_id")
+    customers = relationship("Customer", foreign_keys="Customer.primary_store_id", overlaps="primary_store")
     
     def __repr__(self):
         return f"<Store(id={self.store_id}, name='{self.store_name}', online={self.is_online})>"
