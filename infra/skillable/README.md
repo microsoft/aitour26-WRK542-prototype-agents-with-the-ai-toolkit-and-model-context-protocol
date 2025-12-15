@@ -97,7 +97,7 @@ After successful deployment (automated via LCA-2 or manual), the following envir
 
 Resources are named using the pattern: `<resource-type>-zava-agent-wks` or with the unique suffix when specified.
 
-For Skillable labs, the resource group is aliased as `rg-zava-agent-wks` and referenced via `@lab.CloudResourceGroup(rg-zava-agent-wks).Name`.
+For Skillable labs, the resource group is aliased as `rg-ai-toolkit-mcp` and referenced via `@lab.CloudResourceGroup(rg-ai-toolkit-mcp).Name`.
 
 ## Lab User Experience
 
@@ -140,7 +140,7 @@ az cognitiveservices account list-deleted --query "[].{Name:name, Location:locat
 # Purge a soft-deleted Cognitive Services account (permanently removes it)
 az cognitiveservices account purge `
   --location "West US" `
-  --resource-group "rg-zava-agent-wks" `
+  --resource-group "rg-ai-toolkit-mcp" `
   --name <cognitive-services-account-name>
 
 # Alternative: Use REST API to purge soft-deleted account
@@ -185,13 +185,13 @@ To remove all deployed resources at once:
 
 ```powershell
 # Delete the entire resource group (removes all contained resources)
-az group delete --name "rg-zava-agent-wks-$UNIQUE_SUFFIX" --yes --no-wait
+az group delete --name "rg-ai-toolkit-mcp-$UNIQUE_SUFFIX" --yes --no-wait
 ```
 
 For Skillable environments without a suffix:
 
 ```powershell
-az group delete --name "rg-zava-agent-wks" --yes --no-wait
+az group delete --name "rg-ai-toolkit-mcp" --yes --no-wait
 ```
 
 #### Delete Individual Resources (If Needed)
@@ -200,17 +200,17 @@ If you need to delete specific resources while keeping others:
 
 ```powershell
 # Delete AI Foundry resources
-az ml workspace delete --name <workspace-name> --resource-group "rg-zava-agent-wks"
-az cognitiveservices account delete --name <ai-services-name> --resource-group "rg-zava-agent-wks"
+az ml workspace delete --name <workspace-name> --resource-group "rg-ai-toolkit-mcp"
+az cognitiveservices account delete --name <ai-services-name> --resource-group "rg-ai-toolkit-mcp"
 
 # Delete storage account
-az storage account delete --name <storage-account-name> --resource-group "rg-zava-agent-wks" --yes
+az storage account delete --name <storage-account-name> --resource-group "rg-ai-toolkit-mcp" --yes
 
 # Delete Application Insights
-az monitor app-insights component delete --app <app-insights-name> --resource-group "rg-zava-agent-wks"
+az monitor app-insights component delete --app <app-insights-name> --resource-group "rg-ai-toolkit-mcp"
 
 # Delete Key Vault (with purge protection)
-az keyvault delete --name <keyvault-name> --resource-group "rg-zava-agent-wks"
+az keyvault delete --name <keyvault-name> --resource-group "rg-ai-toolkit-mcp"
 az keyvault purge --name <keyvault-name> --location "West US"
 ```
 
@@ -218,7 +218,7 @@ az keyvault purge --name <keyvault-name> --location "West US"
 
 ```powershell
 # Check if resource group is empty
-az resource list --resource-group "rg-zava-agent-wks"
+az resource list --resource-group "rg-ai-toolkit-mcp"
 
 # Check for any remaining Cognitive Services (soft-deleted)
 az cognitiveservices account list-deleted
@@ -240,7 +240,7 @@ The following Skillable lab variables are used throughout the LCA scripts:
 | `@lab.CloudSubscription.AppId` | Service principal application ID | Used for authentication |
 | `@lab.CloudSubscription.AppSecret` | Service principal secret | Used for authentication |
 | `@lab.CloudSubscription.Id` | Azure subscription ID | Target subscription |
-| `@lab.CloudResourceGroup(rg-zava-agent-wks).Name` | Resource group name | Target resource group |
+| `@lab.CloudResourceGroup(rg-ai-toolkit-mcp).Name` | Resource group name | Target resource group |
 | `@lab.CloudPortalCredential(User1).Username` | Lab user's Azure username | Used for role assignments |
 
 ## Summary

@@ -16,8 +16,8 @@ $AppId = "@lab.CloudSubscription.AppId"
 $Secret = "@lab.CloudSubscription.AppSecret"
 $SubId = "@lab.CloudSubscription.Id"
 
-# Resource group where your template deployed (via alias rg-zava-agent-wks)
-$ResourceGroup = "@lab.CloudResourceGroup(rg-zava-agent-wks).Name"
+# Resource group where your template deployed (via alias rg-ai-toolkit-mcp)
+$ResourceGroup = "@lab.CloudResourceGroup(rg-ai-toolkit-mcp).Name"
 
 # --- Azure login (service principal) ---
 $sec = ConvertTo-SecureString $Secret -AsPlainText -Force

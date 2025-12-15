@@ -37,7 +37,7 @@ function Invoke-WithRetry {
 
 # Assign roles with retries
 Invoke-WithRetry { 
-    New-AzRoleAssignment -SignInName $username -RoleDefinitionName "Azure AI Developer" -Scope "/subscriptions/$subId/resourceGroups/rg-zava-agent-wks"
+    New-AzRoleAssignment -SignInName $username -RoleDefinitionName "Azure AI Developer" -Scope "/subscriptions/$subId/resourceGroups/rg-ai-toolkit-mcp"
     Write-Host "Assigned 'Azure AI Developer' role to resource group."
 }
 

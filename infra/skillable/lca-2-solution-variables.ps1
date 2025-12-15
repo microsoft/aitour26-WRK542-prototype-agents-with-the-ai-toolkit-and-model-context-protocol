@@ -6,108 +6,74 @@
 # Pull outputs from ARM/Bicep deployment and write .env
 # =========================
 
-# --- logging to both Skillable log + file ---
+# --- logging ---
 $logDir = "C:\logs"
 if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
 $logFile = Join-Path $logDir "vm-init_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
 "[$(Get-Date -Format s)] VM LCA start" | Tee-Object -FilePath $logFile
 
-function Log {
-    param([string]$m)
-    $ts = "[$(Get-Date -Format s)] $m"
-    $ts | Tee-Object -FilePath $logFile -Append
-}
+function Log { param([string]$m) $ts = "[$(Get-Date -Format s)] $m"; $ts | Tee-Object -FilePath $logFile -Append }
 
 # --- Skillable tokens / lab values ---
 $UniqueSuffix = "@lab.LabInstance.Id"
-$TenantId     = "@lab.CloudSubscription.TenantId"
-$AppId        = "@lab.CloudSubscription.AppId"
-$Secret       = "@lab.CloudSubscription.AppSecret"
-$SubId        = "@lab.CloudSubscription.Id"
+$TenantId = "@lab.CloudSubscription.TenantId"
+$AppId = "@lab.CloudSubscription.AppId"
+$Secret = "@lab.CloudSubscription.AppSecret"
+$SubId = "@lab.CloudSubscription.Id"
 
-# Resource group where your template deployed
-$ResourceGroup = "@lab.CloudResourceGroup(rg-zava-agent-wks).Name"
+# Resource group and target path
+$ResourceGroup = "rg-ai-toolkit-mcp"
+$targetPath = "C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src"
 
-# --- Azure login (service principal) ---
+# --- Azure login ---
 Log "Authenticating to Azure tenant $TenantId, subscription $SubId"
-$sec  = ConvertTo-SecureString $Secret -AsPlainText -Force
+$sec = ConvertTo-SecureString $Secret -AsPlainText -Force
 $cred = [pscredential]::new($AppId, $sec)
-
-Connect-AzAccount `
-    -ServicePrincipal `
-    -Tenant $TenantId `
-    -Credential $cred `
-    -Subscription $SubId | Out-Null
-
+Connect-AzAccount -ServicePrincipal -Tenant $TenantId -Credential $cred -Subscription $SubId | Out-Null
 $ctx = Get-AzContext
-Log "Logged in as: $($ctx.Account) | Sub: $($ctx.Subscription.Name) ($($ctx.Subscription.Id))"
-
-#######################################################
-# Create .env (LabUser repo src folder)
+Log "Logged in as: $($ctx.Account) | Sub: $($ctx.Subscription.Name)"
 
 # --- Find deployment and read OUTPUTS ---
-$deployment = Get-AzResourceGroupDeployment -ResourceGroupName $ResourceGroup `
-    | Sort-Object Timestamp `
-    | Select-Object -First 1
-
-if (-not $deployment) {
-    Log "No RG-scope deployments found. Trying subscription-scope..."
-    $deployment = Get-AzDeployment `
-        | Sort-Object Timestamp -Descending `
-        | Select-Object -First 1
-}
+Log "Searching RG-scope deployments in $ResourceGroup"
+$deployment = Get-AzResourceGroupDeployment -ResourceGroupName $ResourceGroup | Sort-Object Timestamp -Descending | Select-Object -First 1
 
 if (-not $deployment) {
     throw "Could not locate any ARM/Bicep deployments to read outputs from."
 }
 
-$scope = if ([string]::IsNullOrEmpty($deployment.Location)) { "subscription" } else { $deployment.Location }
-Log "Using deployment: $($deployment.DeploymentName) | Scope: $scope"
-
+Log "Using deployment: $($deployment.DeploymentName)"
 $outs = $deployment.Outputs
 
-# Required outputs
+# Extract values
 $projectsEndpoint = $outs.projectsEndpoint.value
 $applicationInsightsConnectionString = $outs.applicationInsightsConnectionString.value
+$aiFoundryName = $outs.aiFoundryName.value
 
 if (-not $projectsEndpoint) { throw "Deployment output 'projectsEndpoint' not found." }
 if (-not $applicationInsightsConnectionString) { throw "Deployment output 'applicationInsightsConnectionString' not found." }
+if (-not $aiFoundryName) { throw "Deployment output 'aiFoundryName' not found." }
 
-Log "projectsEndpoint captured"
-Log "applicationInsightsConnectionString captured"
-
-# --- Static workshop values ---
-$GPT_MODEL_DEPLOYMENT_NAME        = "gpt-4o"
-$EMBEDDING_MODEL_DEPLOYMENT_NAME  = "text-embedding-3-small"
+Log "projectsEndpoint = $projectsEndpoint"
+Log "applicationInsightsConnectionString captured."
+Log "aiFoundryName = $aiFoundryName"
 
 # Derive Azure OpenAI endpoint
 $azureOpenAIEndpoint = $projectsEndpoint -replace 'api/projects/.*$', ''
+Log "Derived AZURE_OPENAI_ENDPOINT = $azureOpenAIEndpoint"
 
-# Azure OpenAI key
-$aiFoundryName = if ($outs.aiFoundryName) { $outs.aiFoundryName.value } else { $null }
-if (-not $aiFoundryName) { throw "Deployment output 'aiFoundryName' not found." }
-
+# Get Azure OpenAI key
 Log "Retrieving Azure OpenAI key for $aiFoundryName"
-$keys = Get-AzCognitiveServicesAccountKey `
-    -ResourceGroupName $ResourceGroup `
-    -Name $aiFoundryName
-
+$keys = Get-AzCognitiveServicesAccountKey -ResourceGroupName $ResourceGroup -Name $aiFoundryName
 $azureOpenAIKey = $keys.Key1
+Log "Azure OpenAI key retrieved."
 
-# -----------------------------
-# Target repo src folder
-# -----------------------------
-$targetPath = "C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src"
+# --- Static workshop values ---
+$GPT_MODEL_DEPLOYMENT_NAME = "gpt-4o"
+$EMBEDDING_MODEL_DEPLOYMENT_NAME = "text-embedding-3-small"
 
-if (-not (Test-Path $targetPath)) {
-    throw "Target path not found: $targetPath"
-}
-
-# --- Write .env ---
+# --- Write .env file ---
 $ENV_FILE_PATH = Join-Path $targetPath ".env"
-if (Test-Path $ENV_FILE_PATH) {
-    Remove-Item -Path $ENV_FILE_PATH -Force
-}
+if (Test-Path $ENV_FILE_PATH) { Remove-Item -Path $ENV_FILE_PATH -Force }
 
 @"
 PROJECT_ENDPOINT="$projectsEndpoint"
@@ -126,9 +92,7 @@ $aiProjectName = if ($outs.aiProjectName) { $outs.aiProjectName.value } else { $
 $applicationInsightsName = if ($outs.applicationInsightsName) { $outs.applicationInsightsName.value } else { $null }
 
 $RESOURCES_FILE_PATH = Join-Path $targetPath "resources.txt"
-if (Test-Path $RESOURCES_FILE_PATH) {
-    Remove-Item -Path $RESOURCES_FILE_PATH -Force
-}
+if (Test-Path $RESOURCES_FILE_PATH) { Remove-Item -Path $RESOURCES_FILE_PATH -Force }
 
 @(
     "Azure AI Foundry Resources:",
@@ -139,5 +103,4 @@ if (Test-Path $RESOURCES_FILE_PATH) {
 ) | Out-File -FilePath $RESOURCES_FILE_PATH -Encoding utf8
 
 Log "Created resources.txt at $RESOURCES_FILE_PATH"
-
 Log "VM LCA complete."
