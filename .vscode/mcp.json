@@ -1,0 +1,13 @@
+{
+    "servers": {
+        "zava-sales-analysis-server": {
+            "url": "http://localhost:8004/mcp/",
+            "type": "http"
+        },
+        "zava-inventory-server": {
+            "url": "http://localhost:8005/mcp/",
+            "type": "http"
+        }
+    },
+    "inputs": []
+}
