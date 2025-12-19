@@ -13,25 +13,18 @@ Prior to delivering the workshop please:
 
 | Resources          | Links                            | Description |
 |-------------------|----------------------------------|-------------------|
-| Workshop Slide Deck      |  [Presentation](https://aka.ms/)  | Presentation slides for this workshop with presenter notes and embedded demo video |
-| Session Delivery Deck     |  [Deck](https://aka.ms/) | The session delivery slides |
-| More Files     |  [Some More Files](https://aka.ms/) | More File Descriptions |
-
+| Workshop Slide Deck      |  [Deck](https://aka.ms/AAz20h9)  | Presentation slides for this workshop with presenter notes and embedded demo video |
+| Session Delivery Recording     |  [Video](https://aka.ms/AAz1xdk) | The workshop intro delivery recording |
 
 ## 🚀Get Started
 
-The workshop is divided into multiple sections including 16 slides, 1 demo and 2 hands on labs.
+The workshop is divided into multiple sections including 16 slides and a hands-on lab.
 
 ### 🕐Timing
 
 | Time        | Description 
 --------------|-------------
-0:00 - 5:00   | Intro and overview
-5:00 - 70:00  | Session Steps
+0:00 - 10:00   | Intro and overview
+10:00 - 70:00  | Session Steps
 70:00 - 75:00 | Wrap up and Q&A
 
-### 🏋️Preparation
-Preparation Notes go here
-
-### 🖥️Demos
-Description of demos goes here
