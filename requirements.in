@@ -47,6 +47,10 @@ opentelemetry-semantic-conventions==0.59b0
 opentelemetry-util-http==0.59b0
 
 
+## Agent Framework (pre-release)
+--pre
+agent-framework
+
 ## Testing
 pytest>=7.4.0
 pytest-asyncio>=0.23.0
