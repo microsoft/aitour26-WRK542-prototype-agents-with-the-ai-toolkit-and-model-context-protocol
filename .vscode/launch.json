@@ -13,7 +13,7 @@
 				"PYTHONPATH": "${workspaceFolder}/src",
 				"PORT": "8004"
 			},
-			"envFile": "${workspaceFolder}/src/python/workshop/.env"
+			"envFile": "${workspaceFolder}/src/.env"
 		},
 		{
 			"name": "MCP Server: Inventory (8005)",
@@ -27,7 +27,7 @@
 				"PYTHONPATH": "${workspaceFolder}/src",
 				"PORT": "8005"
 			},
-			"envFile": "${workspaceFolder}/src/python/workshop/.env"
+			"envFile": "${workspaceFolder}/src/.env"
 		}
 	],
 	"compounds": [
