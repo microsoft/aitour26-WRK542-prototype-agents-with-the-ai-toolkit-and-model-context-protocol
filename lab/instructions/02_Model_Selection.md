@@ -46,17 +46,17 @@ For this exercise:
    - **Mistral Small 3.1** is an optimized smaller model with faster response times and lower costs.
    
 > [!TIP]
-> If you cannot see one of the two models, click on **View All** to see the complete list of filtered models.
+> If you cannot see one of the two models, click on **Show more** to see the complete list of filtered models.
 >
 > ![View All](../../img/view_all.png)
 > Alternatively, you can also search for the model names directly using the search bar at the top left of the Model Catalog panel.
 
-2. Click **Add model** on each model tile to add them to your collection.
+2. Click **Add model** on the *Mistral Small 3.1* model tile to add it to your collection. Repeat the same for **OpenAI GPT-4o**.
 
 ![Add Model](../../img/add_model.png)
 
 > [!NOTE]
-> Once they are added, the blue button will change to green with the label **Added**.
+> Once they are added, you'll see a green label with the text **Added**.
 
 ## Step 3: Open the Playground for Testing
 
@@ -164,10 +164,13 @@ To access GitHub Copilot Chat, select the **Toggle Chat** icon at the top of the
 ![Toggle chat button.](../../img/toggle-chat.png)
 
 > [!NOTE]
-> If asked to log in at your first interaction with Copilot, select **Sign-in** -> **Continue with GitHub**. Then click on **Continue** to proceed with the GitHub account you used to access the GitHub hosted models, when redirected to the GitHub sign-in page.
+> You'll be asked to log in at your first interaction with Copilot. Select **Sign-in** -> **Continue with GitHub**. Then click on **Continue** to proceed with the GitHub account you used to access the GitHub hosted models, when redirected to the GitHub sign-in page.
 
 Ensure you have *Claude Sonnet 4.5* model selected. Otherwise, expand the dropdown menu to select it.
 ![Select claude Sonnet 4.5](../../img/select_claude_sonnet.png)
+
+> [!WARNING]
+> If you are not logged in, you won't be able to select the model. Send a simple message in the chat window to trigger the login process.
 
 Try the following prompt in the Copilot chat window:
 

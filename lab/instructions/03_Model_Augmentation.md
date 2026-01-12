@@ -70,7 +70,7 @@ To add grounding data, we will use the **file attachment** feature in the Playgr
 
 The document we are going to upload is a JSON file containing a subset of Zava's product catalog. If you want to have a look at its content, browse to the `/data/` folder and locate the file named `zava_product_catalog.json`. Open it in the code editor.
 
-1. Click the file attachment icon in the prompt input area.
+1. Back in the Playground, click the file attachment icon in the prompt input area.
 ![File attachment icon](../../img/file_attachment_icon.png)
 2. Select the file `zava_product_catalog.json` from the `/data/` directory.
 

@@ -152,7 +152,7 @@ Then select the **MCP Server** option. When prompted, select **Use Tools Added i
 1. Select **OK**.
    ![Select Sales Tools](../../img/select-sales-tools.png)
 
-> ![NOTE]
+> [!NOTE]
 > Ensure the Sales Analysis MCP server is running before adding these tools. If the server is not running, the tools will not appear in the list.
 
 ## Step 6: Test Sales Queries with the Agent
@@ -201,8 +201,9 @@ What are our top 3 selling products last year
 
 Now let's add the inventory tools to the agent, so it can check stock levels and perform safe transfers.
 
-1. First, back in Agent Builder, select the **+** icon next to **Tools** to open the wizard for adding tools to the agent. Then select **MCP Server** -> **Use Tools Added in Visual Studio Code**.
-1. Uncheck the box at the top of the wizard next to the search bar to unselect all tool
+1. First, back in Agent Builder, select **Edit Tool List** button within the **Tool** section, to open the wizard for editing tools to the agent.
+
+![Edit Tool List](../../img/edit-tool-list.png)
 1. Type **invent** to filter the tools
 1. Select both tools:
 
@@ -212,7 +213,7 @@ Now let's add the inventory tools to the agent, so it can check stock levels and
 4. Select **OK**
    ![Select Inventory Tools](../../img/select-inventory-tools.png)
 
-> ![NOTE]
+> [!NOTE]
 > Ensure the Inventory MCP server is running before adding these tools. If the server is not running, the tools will not appear in the list.
 
 ## Step 8: Test Inventory Checks and Transfers with the Agent

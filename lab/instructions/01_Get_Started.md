@@ -17,20 +17,20 @@ As a first step, login into the lab Virtual Machine using the credentials you ca
 
 For this workshop, you'll be using a GitHub Enterprise (GHE) account to access GitHub-hosted models in the AI Toolkit Model Catalog and GitHub Copilot features in Visual Studio Code.
 
-Follow the instructions below to sign-in with a given GitHub Enterprise (GHE) account and create a GitHub Codespace for this lab.
+Follow the instructions below to sign-in with a given GitHub Enterprise (GHE) account.
 
 1. Open the edge browser from the taskbar. You'll get a browser tab with the [GHE sign-in page](https://github.com/enterprises/skillable-events) already opened for you.
 
-2. Sign-in with the following credentials:
+2. Click on **Continue** and sign-in with the following credentials:
    -  Username: +++@lab.CloudPortalCredential(User1).Username+++
    -  TAP: +++@lab.CloudPortalCredential(User1).TAP+++
 
-Once you get notified that you are successfully logged in, you can hide the browser tab and move forward with opening the workshop environment in Visual Studio Code.
+Once you get the **Overview** page of the *Skillable Events* GitHub org, that means you are successfully logged in. You can hide the browser tab and move forward with opening the workshop environment in Visual Studio Code.
 
 ## Open the Workshop Environment in Visual Studio Code
 
 Follow these steps to open the workshop environment in Visual Studio Code.
-Once logged in the VM, open the terminal by clicking on the terminal icon in the taskbar at the bottom of the screen.
+Open the terminal by clicking on the terminal icon in the taskbar at the bottom of the screen.
 
 ![Open terminal](../../img/open_terminal.png)
 

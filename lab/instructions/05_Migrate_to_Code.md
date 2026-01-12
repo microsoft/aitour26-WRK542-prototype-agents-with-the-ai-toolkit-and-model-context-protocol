@@ -10,7 +10,7 @@ In Agent Builder, scroll down towards the bottom of the left side of the screen 
 
 ![View code button.](../../img/view-code.png)
 
-When prompted, select your preferred client SDK (e.g. *Microsoft Agent Framework*) and programming language (e.g. *Python*). Once the new file is created, save the file to your workspace.
+When prompted, select your preferred client SDK (e.g. *Microsoft Agent Framework*) and programming language (e.g. *Python*). Once the new file is created, save the file to your workspace (under 'src/cora-app.py').
 
 ## Step 2: View the Code
 
@@ -19,9 +19,6 @@ Before running the script, review the content of the file as there may be placeh
 To access GitHub Copilot Chat, select the **Toggle Chat** icon at the top of the Visual Studio Code window.
 
 ![Toggle chat button.](../../img/toggle-chat.png)
-
-> [!NOTE]
-> If asked to log in at your first interaction with Copilot, select **Sign-in** -> **Continue with GitHub**. Then click on **Continue** to proceed with the GitHub Enterprise account you used to access the GitHub hosted models, when redirected to the GitHub sign-in page.
 
 Save the generated code file to your workspace as 'src/cora-app.py'. Be sure to have the file active so that GitHub Copilot Chat can use the file as context. Alternatively, you could reference the specific file itself in your prompt to GitHub Copilot Chat.
 
