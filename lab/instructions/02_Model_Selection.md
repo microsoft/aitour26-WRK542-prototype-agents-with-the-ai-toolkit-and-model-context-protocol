@@ -163,14 +163,11 @@ To access GitHub Copilot Chat, select the **Toggle Chat** icon at the top of the
 
 ![Toggle chat button.](../../img/toggle-chat.png)
 
-> [!NOTE]
-> You'll be asked to log in at your first interaction with Copilot. Select **Sign-in** -> **Continue with GitHub**. Then click on **Continue** to proceed with the GitHub account you used to access the GitHub hosted models, when redirected to the GitHub sign-in page.
-
 Ensure you have *Claude Sonnet 4.5* model selected. Otherwise, expand the dropdown menu to select it.
 ![Select claude Sonnet 4.5](../../img/select_claude_sonnet.png)
 
 > [!WARNING]
-> If you are not logged in, you won't be able to select the model. Send a simple message in the chat window to trigger the login process.
+> If you are not logged in, you won't be able to select the model. Ensure you have completed the GitHub Copilot sign-in process as per previous lab section or send a prompt to trigger the sign-in flow.
 
 Try the following prompt in the Copilot chat window:
 

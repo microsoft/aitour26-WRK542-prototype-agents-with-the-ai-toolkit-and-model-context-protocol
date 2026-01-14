@@ -78,6 +78,21 @@ Back in your VS Code instance, you'll be asked to select the Foundry project to 
 
 ![Select Project](../../img/select_project.png)
 
+## Enable GitHub Copilot AI features
+
+In this workshop, you'll also be using GitHub Copilot AI features in Visual Studio Code to assist you in your development tasks. To enable GitHub Copilot, you need to sign-in with the same GitHub Enterprise (GHE) account used previously in the Edge browser. Follow the steps below to sign-in to GitHub Copilot:
+
+1. Click on the **Copilot** icon in the right bottom corner of the VS Code window, accompanied by the text "Signed out".
+1. Next, click on **Sign in to use AI features** -> **Continue with GitHub**.
+
+![GitHub Copilot Sign In](../../img/github_copilot_sign_in.png)
+
+1. A new browser tab will open, prompting you to authorize VS Code. Click on **Continue** to sign-in with the same GHE account you used before.  In the next window, click on **Authorize Visual Studio Code**.
+
+![Authorize GitHub Copilot](../../img/authorize_github_copilot.png)
+
+1. A prompt will appear, notifying you that the website is trying to open Visual Studio Code. Click on **Open Visual Studio Code** to proceed and come back to your VS Code instance.
+
 <!-- ## Got issues when logging in with GitHub?
 
 > [!NOTE]
