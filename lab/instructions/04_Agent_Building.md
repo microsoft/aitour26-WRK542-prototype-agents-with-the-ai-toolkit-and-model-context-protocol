@@ -131,6 +131,9 @@ Next, navigate to the mcp servers configuration file, located at ./.vscode/mcp.j
 
 ![MCP start buttons](../../img/mcp_json_start_buttons.png)
 
+> [!WARNING]
+> If you used GitHub Copilot Chat in previous steps of the lab, you might see a *Restart* button instead. This happens because GitHub Copilot Chat by default tries to start all the MCP servers defined in the mcp.json file when it is opened. The initial start attempt failed though as the servers were not running yet. In this case, simply click the *Restart* button to enable the AI Toolkit to connect to the already running MCP servers.
+
 ## Step 5: Add the MCP Server Sales Tools to the Agent
 
 For this lab, we’ll give the agent a small, focused set of tools from both servers (enough to search products, check stock, run sales queries, and perform a transfer with confirmation).
