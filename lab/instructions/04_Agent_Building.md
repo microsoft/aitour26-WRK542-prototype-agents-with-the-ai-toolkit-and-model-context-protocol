@@ -160,10 +160,7 @@ Then select the **MCP Server** option. When prompted, select **Use Tools Added i
 
 ## Step 6: Test Sales Queries with the Agent
 
-You're now ready to test whether the Cora agent executes tool calls for store operations. On the right-end chat pane of the **Agent Builder** tab, attach the circuit breaker image, available at the following path:
-```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions
-```
+You're now ready to test whether the Cora agent executes tool calls for store operations. On the right-end chat pane of the **Agent Builder** tab, attach the circuit breaker image, available in the `src\instructions` folder of your project directory.
 Then submit the following textual prompt:
 
 ```
