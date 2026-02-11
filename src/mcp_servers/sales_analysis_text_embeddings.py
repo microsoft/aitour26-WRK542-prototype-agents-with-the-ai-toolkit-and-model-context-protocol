@@ -22,6 +22,7 @@ import os
 from pathlib import Path
 from typing import List, Optional
 
+from azure.identity import DefaultAzureCredential, get_bearer_token_provider
 from dotenv import load_dotenv
 from openai import AzureOpenAI
 
@@ -38,16 +39,15 @@ class SemanticSearchTextEmbedding:
 
         # Azure OpenAI configuration
         self.endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-        self.api_key = os.getenv("AZURE_OPENAI_KEY")
         self.model_name = "text-embedding-3-small"
         self.deployment = os.getenv(
             "EMBEDDING_MODEL_DEPLOYMENT_NAME", "text-embedding-3-small"
         )
 
-        # Check if Azure OpenAI endpoint and key are configured
-        if self.endpoint == "<ENDPOINT_URL>" or not self.api_key:
+        # Check if Azure OpenAI endpoint is configured
+        if not self.endpoint or self.endpoint == "<ENDPOINT_URL>":
             logger.warning(
-                "Warning: AZURE_OPENAI_ENDPOINT or AZURE_OPENAI_KEY not configured. Semantic search will not work."
+                "Warning: AZURE_OPENAI_ENDPOINT not configured. Semantic search will not work."
             )
             self.openai_client = None
             return
@@ -80,13 +80,18 @@ class SemanticSearchTextEmbedding:
             load_dotenv()
 
     def _setup_azure_openai_client(self) -> AzureOpenAI:
-        """Setup and return Azure OpenAI client with API key authentication."""
+        """Setup and return Azure OpenAI client with Entra ID (DefaultAzureCredential) authentication."""
         api_version = "2024-02-01"
+
+        token_provider = get_bearer_token_provider(
+            DefaultAzureCredential(),
+            "https://cognitiveservices.azure.com/.default",
+        )
 
         return AzureOpenAI(
             api_version=api_version,
             azure_endpoint=self.endpoint,
-            api_key=self.api_key,
+            azure_ad_token_provider=token_provider,
         )
 
     def generate_query_embedding(self, query_text: str) -> Optional[List[float]]:
