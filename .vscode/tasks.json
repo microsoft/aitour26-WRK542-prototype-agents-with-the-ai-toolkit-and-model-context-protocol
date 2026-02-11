@@ -29,57 +29,9 @@
 			"args": []
 		},
 		{
-			"label": "Run Finance MCP Server",
-			"type": "shell",
-			"command": "cd src/mcp_servers && python finance_server.py",
-			"group": "build",
-			"isBackground": true,
-			"problemMatcher": [],
-			"args": [],
-			"presentation": {
-				"echo": true,
-				"reveal": "always",
-				"focus": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
-		},
-		{
-			"label": "Run Supplier MCP Server",
-			"type": "shell",
-			"command": "cd src/mcp_servers && PORT=8002 python supplier_server.py",
-			"group": "build",
-			"isBackground": true,
-			"problemMatcher": [],
-			"args": [],
-			"presentation": {
-				"echo": true,
-				"reveal": "always",
-				"focus": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
-		},
-		{
-			"label": "Run Product MCP Server",
-			"type": "shell",
-			"command": "cd src/mcp_servers && PORT=8003 python product_server.py",
-			"group": "build",
-			"isBackground": true,
-			"problemMatcher": [],
-			"args": [],
-			"presentation": {
-				"echo": true,
-				"reveal": "always",
-				"focus": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
-		},
-		{
 			"label": "Run Sales Analysis MCP Server",
 			"type": "shell",
-			"command": "cd src/mcp_servers && PORT=8004 python sales_analysis.py",
+			"command": "cd src/mcp_servers && python sales_analysis.py",
 			"group": "build",
 			"isBackground": true,
 			"problemMatcher": [],
@@ -95,7 +47,7 @@
 		{
 			"label": "Run Inventory MCP Server",
 			"type": "shell",
-			"command": "cd src/mcp_servers && PORT=8005 python inventory_server.py",
+			"command": "cd src/mcp_servers && python inventory_server.py",
 			"group": "build",
 			"isBackground": true,
 			"problemMatcher": [],
@@ -111,9 +63,6 @@
 		{
 			"label": "Run All MCP Servers",
 			"dependsOn": [
-				"Run Finance MCP Server",
-				"Run Supplier MCP Server",
-				"Run Product MCP Server",
 				"Run Sales Analysis MCP Server",
 				"Run Inventory MCP Server"
 			],
