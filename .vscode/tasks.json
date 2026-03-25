@@ -2,121 +2,74 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "Run Agent Web Chat (Legacy)",
+			"label": "MCP: Sales Analysis (8004)",
 			"type": "shell",
-			"command": "cd src/python/workshop && python app.py",
-			"group": "build",
+			"command": "python",
+			"args": ["-m", "mcp_servers.sales_analysis"],
 			"isBackground": true,
-			"problemMatcher": [],
-			"args": []
-		},
-		{
-			"label": "Run Agent Service",
-			"type": "shell",
-			"command": "cd src/python/workshop && python agent_service.py",
-			"group": "build",
-			"isBackground": true,
-			"problemMatcher": [],
-			"args": []
-		},
-		{
-			"label": "Run Web App",
-			"type": "shell",
-			"command": "cd src/python/web_app && python web_app.py",
-			"group": "build",
-			"isBackground": true,
-			"problemMatcher": [],
-			"args": []
-		},
-		{
-			"label": "Run Finance MCP Server",
-			"type": "shell",
-			"command": "cd src/mcp_servers && python finance_server.py",
-			"group": "build",
-			"isBackground": true,
-			"problemMatcher": [],
-			"args": [],
-			"presentation": {
-				"echo": true,
-				"reveal": "always",
-				"focus": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
-		},
-		{
-			"label": "Run Supplier MCP Server",
-			"type": "shell",
-			"command": "cd src/mcp_servers && PORT=8002 python supplier_server.py",
-			"group": "build",
-			"isBackground": true,
-			"problemMatcher": [],
-			"args": [],
-			"presentation": {
-				"echo": true,
-				"reveal": "always",
-				"focus": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
-		},
-		{
-			"label": "Run Product MCP Server",
-			"type": "shell",
-			"command": "cd src/mcp_servers && PORT=8003 python product_server.py",
-			"group": "build",
-			"isBackground": true,
-			"problemMatcher": [],
-			"args": [],
-			"presentation": {
-				"echo": true,
-				"reveal": "always",
-				"focus": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
-		},
-		{
-			"label": "Run Sales Analysis MCP Server",
-			"type": "shell",
-			"command": "cd src/mcp_servers && PORT=8004 python sales_analysis.py",
-			"group": "build",
-			"isBackground": true,
-			"problemMatcher": [],
-			"args": [],
-			"presentation": {
-				"echo": true,
-				"reveal": "always",
-				"focus": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
-		},
-		{
-			"label": "Run Inventory MCP Server",
-			"type": "shell",
-			"command": "cd src/mcp_servers && PORT=8005 python inventory_server.py",
-			"group": "build",
-			"isBackground": true,
-			"problemMatcher": [],
-			"args": [],
-			"presentation": {
-				"echo": true,
-				"reveal": "always",
-				"focus": false,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
-		},
-		{
-			"label": "Run All MCP Servers",
-			"dependsOn": [
-				"Run Finance MCP Server",
-				"Run Supplier MCP Server",
-				"Run Product MCP Server",
-				"Run Sales Analysis MCP Server",
-				"Run Inventory MCP Server"
+			"problemMatcher": [
+				{
+					"pattern": {
+						"regexp": "^never_match$"
+					},
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": "Starting Sales Analysis|Starting MCP server",
+						"endsPattern": "Application startup complete"
+					}
+				}
 			],
+			"options": {
+				"cwd": "${workspaceFolder}",
+				"env": {
+					"PYTHONPATH": "${workspaceFolder}/src",
+					"PORT": "8004"
+				}
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"label": "MCP: Inventory (8005)",
+			"type": "shell",
+			"command": "python",
+			"args": ["-m", "mcp_servers.inventory_server"],
+			"isBackground": true,
+			"problemMatcher": [
+				{
+					"pattern": {
+						"regexp": "^never_match$"
+					},
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": "Starting Inventory|Starting MCP server",
+						"endsPattern": "Application startup complete"
+					}
+				}
+			],
+			"options": {
+				"cwd": "${workspaceFolder}",
+				"env": {
+					"PYTHONPATH": "${workspaceFolder}/src",
+					"PORT": "8005"
+				}
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"label": "Start MCP Servers",
+			"dependsOn": [
+				"MCP: Sales Analysis (8004)",
+				"MCP: Inventory (8005)"
+			],
+			"dependsOrder": "sequence",
 			"problemMatcher": []
 		},
 		{
