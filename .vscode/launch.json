@@ -5,7 +5,7 @@
 			"name": "All MCP Servers (F5)",
 			"type": "node-terminal",
 			"request": "launch",
-			"command": "${workspaceFolder}/src/start_mcp_servers.sh",
+			"command": "powershell -ExecutionPolicy Bypass -File ${workspaceFolder}/src/start_mcp_servers.ps1",
 			"cwd": "${workspaceFolder}",
 			"consoleName": "MCP Servers"
 		}
