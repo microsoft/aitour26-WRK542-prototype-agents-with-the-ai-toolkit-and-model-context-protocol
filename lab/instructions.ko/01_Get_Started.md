@@ -141,4 +141,4 @@ If you encounter issues when logging in with the given GHE account, you can alwa
 ## 시작할 준비 완료
 
 이로써 Visual Studio Code에서 AI Toolkit과 Microsoft Foundry 호스팅 모델을 사용하기 위한 필수 설정이 모두 끝났습니다. 이제 Model Catalog를 탐색하고 모델과 상호작용을 시작합니다.
-Click **Next** to proceed to the following section of the lab.
+다음 섹션을 진행하기 위해서 아래의 **다음**을 눌러서 이동해주세요.

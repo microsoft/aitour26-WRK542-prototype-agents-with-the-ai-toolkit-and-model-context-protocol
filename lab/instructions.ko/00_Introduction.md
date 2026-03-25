@@ -64,4 +64,4 @@ Zava의 매장 관리자와 본사 팀은 다음과 같은 질문에 빠르게 �
 
 워크숍 전 과정에서 AI Toolkit과 Microsoft Foundry를 사용해 Cora의 기능을 구축, 테스트, 개선하면서 실제 비즈니스 시나리오를 위한 AI 에이전트를 만드는 방법을 학습합니다.
 
-Click **Next** to set up your Workshop environment and get started.
+아래에서 워크숍 환경을 설정하려면 **다음**을 눌러 시작하세요.

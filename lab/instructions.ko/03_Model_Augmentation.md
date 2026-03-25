@@ -54,8 +54,14 @@ C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-
 
 그리고 다음 사용자 프롬프트를 함께 입력합니다.
 
+영문 프롬프트
 ```
 Here’s a photo from the store floor. What is this component, and what details should I capture (e.g., amperage, pole type) before searching our catalog and checking stock?
+```
+
+한글 프롬프트
+```
+매장 현장에서 찍은 사진입니다. 이 부품이 무엇인지, 그리고 카탈로그 검색 및 재고 확인 전에 (전류 용량, 극 수 등과 같이) 어떤 정보를 기록해야 하는지 알려주세요.
 ```
 
 종이비행기 아이콘을 클릭해 멀티모달 프롬프트를 실행합니다.
@@ -94,8 +100,14 @@ What’s the weather like in Seoul today?
 3. 업로드가 완료되면 프롬프트 입력 영역 아래에 첨부 파일로 표시됩니다.
 4. 텍스트 필드에 아래 프롬프트를 입력합니다.
 
+영문 프롬프트
 ```
 From the attached Zava product catalog, suggest a circuit breaker option that would commonly be used for a 15-amp household circuit, and explain what you would verify before recommending it.
+```
+
+한글 프롬프트
+```
+첨부된 Zava 제품 카탈로그에서 15암페어 가정용 회로에 일반적으로 사용되는 차단기 옵션을 하나 추천하고, 이를 추천하기 전에 어떤 사항을 확인해야 하는지 설명해 주세요.
 ```
 
 모델은 업로드된 제품 카탈로그를 분석해, 차단기 요청에 맞는 근거 있는 제안을 제공합니다.
@@ -110,4 +122,4 @@ From the attached Zava product catalog, suggest a circuit breaker option that wo
 - 멀티모달 입력 테스트는 시스템 메시지와 컨텍스트 데이터의 효과를 검증하는 데 도움이 됩니다.
 - 그라운딩 데이터는 모델 입력 제한 내에 들어가도록 관련성이 높고 간결해야 합니다.
 
-Click **Next** to proceed to the following section of the lab.
+다음 실습 세션으로 가기 위해서 아래 **다음**을 클릭하세요.

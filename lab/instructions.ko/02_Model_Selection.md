@@ -75,7 +75,7 @@
 1. 텍스트 입력 필드(“Type a prompt” 플레이스홀더가 보이는 영역)에 아래 프롬프트를 입력합니다.
 
 ```
-I’m a store manager at a DIY retailer. What are the most important metrics to review in a weekly sales summary, and why? Respond in Korean.
+나는 DIY 소매점의 매장 관리자입니다. 주간 매출 요약에서 검토해야 할 가장 중요한 지표는 무엇이며, 그 이유는 무엇인가요?
 ```
 
 2. 종이비행기 아이콘을 클릭해 두 모델에서 동시에 프롬프트를 실행합니다.
@@ -85,19 +85,19 @@ I’m a store manager at a DIY retailer. What are the most important metrics to 
 다음으로 아래 프롬프트로 추론 능력을 테스트합니다.
 
 ```
-We have 3 stores (A, B, C). We only have 40 circuit breakers total across all stores and replenishment arrives in 10 days.
+우리는 A, B, C 세 개의 매장을 운영하고 있으며, 세 매장을 합쳐 사용할 수 있는 차단기(circuit breaker)는 총 40개뿐입니다. 다음 보충 재고는 10일 후에 도착합니다. 
 
-Here’s a simple snapshot of sales trend and stock on hand:
+아래는 판매 추세와 현재 재고에 대한 간단한 스냅샷입니다: 
 
-| Store | Sales trend (WoW) | Avg weekly units sold | Current stock (units) |
+| 매장 | 판매추세(주간대비) | 주간 평군 판매량 | 현재재고(개) |
 |------:|-------------------:|----------------------:|----------------------:|
 | A     | +30%              | 18                    | 8                     |
 | B     | 0%                | 10                    | 22                    |
 | C     | -15%              | 7                     | 10                    |
 
-How should we allocate stock today to minimize stockouts and lost sales? Explain your reasoning step by step, and list the 3 most important additional data points you would ask for.
+오늘 재고를 어떻게 배분해야 품절(stockout)과 판매 손실을 최소화할 수 있을까요?
 
-Respond in Korean.
+그 이유를 단계별로 설명하고, 추가로 확인해야 할 가장 중요한 데이터 3가지를 제시하세요.
 ```
 
 다음으로 모델의 이미지 처리 능력을 테스트합니다.
@@ -105,7 +105,7 @@ Respond in Korean.
 1. 텍스트 입력 필드에 아래 프롬프트를 입력합니다.
 
 ```
-In Korean, describe what's in this image and what kind of electrical component it appears to be.
+이 이미지에 무엇이 들어 있는지, 그리고 어떤 종류의 전기 부품으로 보이는지 설명하세요.
 ```
 
 2. 이미지 첨부 아이콘을 클릭해 입력으로 이미지를 추가합니다.
@@ -153,11 +153,19 @@ GitHub Copilot Chat을 열려면 Visual Studio Code 상단의 **Toggle Chat** �
 
 Copilot Chat 창에서 아래 프롬프트를 시도합니다.
 
+한글 프롬프트
 ```
-#mcp_azure_mcp_foundry I am exploring models for an AI agent that should support Zava - a DIY retailer with 20 stores across the United States and an online channel - on store operations and head office sales analysis. I am evaluating Llama-4-Maverick-17B-128E-Instruct-FP8 and OpenAI GPT-5.3-chat. Which one would you recommend for this scenario, and why? Explain the trade-offs between models (e.g., reasoning ability, cost, latency, context length) so that I can make an informed choice.
+#mcp_azure_mcp_foundry 미국 전역에 20개의 매장을 보유하고 온라인 채널도 운영하는 DIY 소매업체 Zava를 지원할 AI 에이전트 모델을 검토하고 있습니다. 이 에이전트는 매장 운영과 본사 매출 분석을 지원해야 합니다.
+Llama-4-Maverick-17B-128E-Instruct-FP8 모델과 OpenAI GPT-5.3-chat 모델을 평가 중인데, 이 시나리오에는 어느 모델을 추천하시며 그 이유는 무엇인가요?
+또한 모델 간의 트레이드오프(예: 추론 능력, 비용, 지연 속도, 컨텍스트 길이 등)를 설명해 주어 제가 정보를 기반으로 선택할 수 있도록 도와주세요.
+```
+영문 프롬프트
+```
+#mcp_azure_mcp_foundry I am exploring models for an AI agent that should support Zava - a DIY retailer with 20 stores across the United States and an online channel - on store operations and head office sales analysis. I am evaluating Llama-4-Maverick-17B-128E-Instruct-FP8 and OpenAI GPT-5.3-chat. Which one would you recommend for this scenario, and why? Explain the trade-offs between models (e.g., reasoning ability, cost, latency, context length) so that I can make an informed choice
 ```
 
-이 질문에 답하기 위해 Copilot은 *Foundry MCP server* 도구를 사용합니다. 이 도구는 유스케이스에 기반한 모델 추천을 제공합니다. Copilot이 Foundry MCP server 도구 접근 승인을 요청하면 **Allow in this session**을 클릭해 진행합니다. 분석에 필요한 정보를 수집하기 위해 여러 도구 접근이 반복해서 요청될 수 있습니다.
+이 질문에 답하기 위해 Copilot은 *Foundry MCP server* 도구를 사용합니다. 이 도구는 유스케이스에 기반한 모델 추천을 제공합니다. Copilot이 Foundry MCP server 도구 접근 승인을 요청하면 **Allow in this session**을 클릭해 진행합니다.  
+**분석에 필요한 정보를 수집하기 위해 여러 도구 접근이 반복해서 요청될 수 있습니다.**
 
 ![Get AI model guidance](../../img/get_ai_model_guidance.png)
 
@@ -180,5 +188,5 @@ Copilot Chat 창에서 아래 프롬프트를 시도합니다.
 - 호스팅 옵션마다 개발 단계에 따라 서로 다른 장점이 있습니다.
 - 내장된 비교 기능으로 멀티모달 기능을 효과적으로 테스트할 수 있습니다.
 
-이 탐색 과정을 통해 성능, 비용, 기능, 배포 요구사항의 균형을 고려하여 유스케이스에 가장 적합한 모델을 선택할 수 있습니다.
-Click **Next** to proceed to the following section of the lab.
+이 탐색 과정을 통해 성능, 비용, 기능, 배포 요구사항의 균형을 고려하여 유스케이스에 가장 적합한 모델을 선택할 수 있습니다.  
+다음 실습 섹션을 위해 아래에서 **다음**을 눌러주세요.
