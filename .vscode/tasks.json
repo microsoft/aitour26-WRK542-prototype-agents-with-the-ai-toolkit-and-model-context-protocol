@@ -2,6 +2,124 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "Run Agent Web Chat (Legacy)",
+			"type": "shell",
+			"command": "cd src/python/workshop && python app.py",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"args": []
+		},
+		{
+			"label": "Run Agent Service",
+			"type": "shell",
+			"command": "cd src/python/workshop && python agent_service.py",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"args": []
+		},
+		{
+			"label": "Run Web App",
+			"type": "shell",
+			"command": "cd src/python/web_app && python web_app.py",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"args": []
+		},
+		{
+			"label": "Run Finance MCP Server",
+			"type": "shell",
+			"command": "cd src/mcp_servers && python finance_server.py",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"args": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"label": "Run Supplier MCP Server",
+			"type": "shell",
+			"command": "cd src/mcp_servers && PORT=8002 python supplier_server.py",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"args": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"label": "Run Product MCP Server",
+			"type": "shell",
+			"command": "cd src/mcp_servers && PORT=8003 python product_server.py",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"args": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"label": "Run Sales Analysis MCP Server",
+			"type": "shell",
+			"command": "cd src/mcp_servers && PORT=8004 python sales_analysis.py",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"args": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"label": "Run Inventory MCP Server",
+			"type": "shell",
+			"command": "cd src/mcp_servers && PORT=8005 python inventory_server.py",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"args": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"label": "Run All MCP Servers",
+			"dependsOn": [
+				"Run Finance MCP Server",
+				"Run Supplier MCP Server",
+				"Run Product MCP Server",
+				"Run Sales Analysis MCP Server",
+				"Run Inventory MCP Server"
+			],
+			"problemMatcher": []
+		},
+		{
 			"label": "Docs: Install Python Dependencies",
 			"type": "shell",
 			"command": "pip",

@@ -2,12 +2,49 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "All MCP Servers (F5)",
-			"type": "node-terminal",
+			"name": "MCP Server: Sales Analysis (8004)",
+			"type": "debugpy",
 			"request": "launch",
-			"command": "powershell -ExecutionPolicy Bypass -File ${workspaceFolder}/src/start_mcp_servers.ps1",
+			"module": "mcp_servers.sales_analysis",
+			"justMyCode": true,
+			"console": "integratedTerminal",
+			"consoleName": "MCP Server: Sales Analysis (8004)",
 			"cwd": "${workspaceFolder}",
-			"consoleName": "MCP Servers"
+			"env": {
+				"PYTHONPATH": "${workspaceFolder}/src",
+				"PORT": "8004"
+			},
+			"envFile": "${workspaceFolder}/src/.env"
+		},
+		{
+			"name": "MCP Server: Inventory (8005)",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "mcp_servers.inventory_server",
+			"justMyCode": true,
+			"console": "integratedTerminal",
+			"consoleName": "MCP Server: Inventory (8005)",
+			"cwd": "${workspaceFolder}",
+			"env": {
+				"PYTHONPATH": "${workspaceFolder}/src",
+				"PORT": "8005"
+			},
+			"envFile": "${workspaceFolder}/src/.env"
+		}
+	],
+	"compounds": [
+		{
+			"name": "All MCP Servers (F5)",
+			"configurations": [
+				"MCP Server: Sales Analysis (8004)",
+				"MCP Server: Inventory (8005)"
+			],
+			"stopAll": true,
+			"presentation": {
+				"hidden": false,
+				"group": "mcp-servers",
+				"order": 1
+			}
 		}
 	]
 }
