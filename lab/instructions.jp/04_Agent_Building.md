@@ -1,10 +1,10 @@
 # エージェント構築: Agent Builder で Zava 店舗運営エージェントを作る
 
-このセクションでは、AI Toolkit の Agent Builder を使って Cora エージェントを作成し、ツールを追加してユーザーの代わりにアクションを実行できるようにします。Agent Builder は、プロンプトエンジニアリングや MCP サーバーなどのツール連携を含む、エージェント構築のエンジニアリング ワークフローを効率化します。
+このセクションでは、Foundry Toolkit の Agent Builder を使って Cora エージェントを作成し、ツールを追加してユーザーの代わりにアクションを実行できるようにします。Agent Builder は、プロンプトエンジニアリングや MCP サーバーなどのツール連携を含む、エージェント構築のエンジニアリング ワークフローを効率化します。
 
 ## Step 1: Agent Builder を確認する
 
-Agent Builder にアクセスするには、AI Toolkit のビューで **Developer Tools** 配下の **Build** セクションを見つけます。展開して **Create Agent** をクリックします。次に **Open Agent Builder** を選び、Visual Studio Code 内の新しいタブで Agent Builder UI を開きます。
+Agent Builder にアクセスするには、Foundry Toolkit のビューで **Developer Tools** 配下の **Build** セクションを見つけます。展開して **Create Agent** をクリックします。次に **Open Agent Builder** を選び、Visual Studio Code 内の新しいタブで Agent Builder UI を開きます。
 
 ![Create New Agent](../../img/create-new-agent.png)
 
@@ -218,11 +218,11 @@ Transfer 5 units of the Single Pole Circuit Breaker 20A from a store with surplu
 
 Instructions やツールを調整しながら、複数バージョンを保存して比較することもできます。
 
-ローカル エージェントはいつでも、AI Toolkit ビューの **My Resources**->**Local Resources**->**Agents** ->**Local** から参照できます。
+ローカル エージェントはいつでも、Foundry Toolkit ビューの **My Resources**->**Local Resources**->**Agents** ->**Local** から参照できます。
 
 ## まとめ（Key Takeaways）
 
-- AI Toolkit の Agent Builder は、構成とテスト／評価を分離した 2 ペイン UI を提供する
+- Foundry Toolkit の Agent Builder は、構成とテスト／評価を分離した 2 ペイン UI を提供する
 - 具体的な Instructions により、エージェントの人格、会話スタイル、応答パターンを一貫させられる
 - MCP サーバーは、静的なファイル添付よりも効果的に、AI エージェントを外部ツールやデータソースへ接続する標準フレームワークを提供する
 - MCP ツール統合により、売上メトリクスや現在在庫を動的に取得し、在庫移動のような運用アクションを **明示的な確認付き**で安全に実行できる

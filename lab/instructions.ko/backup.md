@@ -1,16 +1,16 @@
 @lab.Title
 # 소개  
 >[!NOTE]
-> 이 워크숍은 **75분** 동안 진행되며, Visual Studio Code에서 AI Toolkit(AITK)과 Microsoft Foundry를 활용해 비즈니스 시나리오에 맞는 멀티모달 에이전트를 프로토타이핑하는 실습 경험을 제공합니다.
+> 이 워크숍은 **75분** 동안 진행되며, Visual Studio Code에서 Foundry Toolkit과 Microsoft Foundry를 활용해 비즈니스 시나리오에 맞는 멀티모달 에이전트를 프로토타이핑하는 실습 경험을 제공합니다.
 
 ## 학습 목표  
 이 워크숍을 마치면 다음을 수행할 수 있습니다:
 
-• AITK 모델 카탈로그에서 다양한 모델을 탐색하고 비교하여, 사용 사례에 가장 적합한 모델을 선택할 수 있습니다.  
+• Foundry Toolkit 모델 카탈로그에서 다양한 모델을 탐색하고 비교하여, 사용 사례에 가장 적합한 모델을 선택할 수 있습니다.  
 
-• AITK Playground에서 프롬프트 엔지니어링과 컨텍스트 데이터를 활용해 모델을 보강하고, 더 정확하고 근거 있는 응답을 생성할 수 있습니다.  
+• Foundry Toolkit Playground에서 프롬프트 엔지니어링과 컨텍스트 데이터를 활용해 모델을 보강하고, 더 정확하고 근거 있는 응답을 생성할 수 있습니다.  
 
-• AITK Agent Builder를 사용해 MCP(Model Context Protocol) 기반 도구와 지침을 결합하여 에이전트를 프로토타이핑할 수 있습니다.  
+• Foundry Toolkit Agent Builder를 사용해 MCP(Model Context Protocol) 기반 도구와 지침을 결합하여 에이전트를 프로토타이핑할 수 있습니다.  
 
 ## 리소스  
 > [!TIP]
@@ -18,16 +18,16 @@
 
 ## 랩 요약  
 
-이 랩은 Microsoft Foundry와 AI Toolkit을 사용해 멀티모달 에이전트를 프로토타이핑하는 전체 과정을 4개의 섹션으로 구성해 안내합니다.
+이 랩은 Microsoft Foundry와 Foundry Toolkit을 사용해 멀티모달 에이전트를 프로토타이핑하는 전체 과정을 4개의 섹션으로 구성해 안내합니다.
 
 1. **파트 1 - 모델 선택**  
-   AI 솔루션을 구축할 때 모델 선택은 핵심 단계입니다. 이 섹션에서는 AI Toolkit의 모델 카탈로그를 탐색하며, 비즈니스 시나리오에 가장 적합한 모델을 비교·선택합니다.
+   AI 솔루션을 구축할 때 모델 선택은 핵심 단계입니다. 이 섹션에서는 Foundry Toolkit의 모델 카탈로그를 탐색하며, 비즈니스 시나리오에 가장 적합한 모델을 비교·선택합니다.
 
 2. **파트 2 - 모델 보강**  
    선택한 모델을 프롬프트 엔지니어링과 컨텍스트 데이터를 활용해 보강하여, 특정 사용 사례에 더 적합한 성능과 관련성을 확보하는 방법을 배웁니다.
 
 3. **파트 3 - 에이전트 프로토타이핑**  
-   AITK Agent Builder를 사용해 에이전트를 프로토타이핑합니다. 선택하고 보강한 모델을 MCP(Model Context Protocol) 기반 도구 및 지침과 결합합니다.
+  Foundry Toolkit Agent Builder를 사용해 에이전트를 프로토타이핑합니다. 선택하고 보강한 모델을 MCP(Model Context Protocol) 기반 도구 및 지침과 결합합니다.
 
 4. **파트 4 - 프로토타입에서 코드로**  
    마지막으로, 프로토타입을 실제 애플리케이션에 통합할 수 있는 코드 형태로 내보내는 방법을 학습합니다.
@@ -66,17 +66,17 @@ Zava의 매장 관리자와 본사 팀은 다음과 같은 질문에 빠르게 �
 • **보고서 표준화** - 매장 관리자와 본사 팀 간 일관된 보고  
 • **멀티채널 운영 지원** - 매장과 온라인 간 재고 조정  
 
-이 워크숍을 통해 여러분은 AI Toolkit과 Microsoft Foundry를 사용해 Cora의 기능을 구축·테스트·개선하며, 실제 비즈니스 시나리오에 적용 가능한 AI 에이전트를 만드는 방법을 배우게 됩니다.
+이 워크숍을 통해 여러분은 Foundry Toolkit과 Microsoft Foundry를 사용해 Cora의 기능을 구축·테스트·개선하며, 실제 비즈니스 시나리오에 적용 가능한 AI 에이전트를 만드는 방법을 배우게 됩니다.
 
 
 ===
 # 01-시작하기
 
 > [!TIP] 
-> **AI Toolkit(AITK)**란 무엇인가요?  
-> AI Toolkit(AITK)은 Visual Studio Code용 확장으로, 다양한 AI 모델과 서비스를 하나의 통합된 인터페이스에서 탐색하고 상호작용할 수 있도록 해주는 도구입니다.  
+> **Foundry Toolkit**이란 무엇인가요?  
+> Foundry Toolkit은 Visual Studio Code용 확장으로, 다양한 AI 모델과 서비스를 하나의 통합된 인터페이스에서 탐색하고 상호작용할 수 있도록 해주는 도구입니다.  
 > 이를 통해 개발자는 GitHub, Microsoft Foundry, 로컬 환경 등 여러 플랫폼에 호스팅된 오픈소스 및 상용 모델을 쉽게 비교·활용할 수 있습니다.  
-> AITK는 모델 선택, 프롬프트 엔지니어링, 에이전트 프로토타이핑 및 테스트를 코드 편집기 안에서 직접 수행할 수 있도록 하여 생성형 AI 개발 워크플로우를 크게 향상시킵니다.
+> Foundry Toolkit은 모델 선택, 프롬프트 엔지니어링, 에이전트 프로토타이핑 및 테스트를 코드 편집기 안에서 직접 수행할 수 있도록 하여 생성형 AI 개발 워크플로우를 크게 향상시킵니다.
 
 ## Windows에 로그인하기
 
@@ -92,7 +92,7 @@ Zava의 매장 관리자와 본사 팀은 다음과 같은 질문에 빠르게 �
 
 ## GitHub에 로그인하기
 
-이 워크숍에서는 GitHub Enterprise(GHE) 계정을 사용하여 AI Toolkit Model Catalog의 GitHub 호스팅 모델과 Visual Studio Code의 GitHub Copilot 기능을 활용합니다.
+이 워크숍에서는 GitHub Enterprise(GHE) 계정을 사용하여 Foundry Toolkit Model Catalog의 GitHub 호스팅 모델과 Visual Studio Code의 GitHub Copilot 기능을 활용합니다.
 
 아래 단계에 따라 GitHub Enterprise(GHE) 계정으로 로그인하고, 이 랩을 위한 Codespace를 생성합니다.
 
@@ -129,8 +129,8 @@ VM에 로그인한 후, 화면 하단 작업 표시줄의 터미널 아이콘을
 
 Visual Studio Code 환경에는 이미 두 가지 확장이 설치되어 있어야 합니다:
 
-- **AI Toolkit**: 이 랩에서 다양한 AI 모델 및 서비스와 상호작용하는 데 사용합니다.
-- **Microsoft Foundry 확장**: AI Toolkit 패키지의 일부로 설치되며, Microsoft Foundry에서 호스팅되는 모델에 접근할 수 있습니다.  
+- **Foundry Toolkit**: 이 랩에서 다양한 AI 모델 및 서비스와 상호작용하는 데 사용합니다.
+- **Microsoft Foundry 확장**: Foundry Toolkit 패키지의 일부로 설치되며, Microsoft Foundry에서 호스팅되는 모델에 접근할 수 있습니다.  
   두 확장이 올바르게 설치되어 있다면 아래 스크린샷처럼 VS Code 왼쪽 사이드바에 아이콘이 표시됩니다.
 
 ![Installed extensions](https://raw.githubusercontent.com/microsoft/aitour26-WRK540b-prototype-agents-with-the-ai-toolkit-and-model-context-protocol/main/img/installed_extensions.png)
@@ -181,7 +181,7 @@ VS Code로 돌아오면 사용할 Foundry 프로젝트를 선택하라는 메시
 
 ## 시작할 준비 완료
 
-이제 VS Code에서 AI Toolkit과 Microsoft Foundry 모델을 사용할 준비가 완료되었습니다.  
+이제 VS Code에서 Foundry Toolkit과 Microsoft Foundry 모델을 사용할 준비가 완료되었습니다.  
 다음 단계에서는 모델 카탈로그를 탐색하고 모델과 상호작용해 보겠습니다.
 
 **Next**를 클릭해 다음 섹션으로 이동하세요.
@@ -190,14 +190,14 @@ VS Code로 돌아오면 사용할 Foundry 프로젝트를 선택하라는 메시
 ===
 # 02-모델 선택
 
-모델 선택: AI Toolkit Model Catalog 탐색
+모델 선택: Foundry Toolkit Model Catalog 탐색
 
-이 섹션에서는 AI Toolkit Model Catalog를 탐색하여 멀티모달 에이전트 프로젝트에 사용할 모델을 발견하고, 필터링하고, 비교하는 방법을 배웁니다.  
+이 섹션에서는 Foundry Toolkit Model Catalog를 탐색하여 멀티모달 에이전트 프로젝트에 사용할 모델을 발견하고, 필터링하고, 비교하는 방법을 배웁니다.  
 모델 카탈로그는 GitHub, Microsoft Foundry, OpenAI 등 다양한 제공업체의 모델에 접근할 수 있도록 합니다.
 
 ## 1단계: 필터 적용하여 선택 범위 좁히기
 
-1. 왼쪽 사이드바에서 **AI Toolkit** 아이콘을 찾습니다.  
+1. 왼쪽 사이드바에서 **Foundry Toolkit** 아이콘을 찾습니다.  
 2. 아이콘을 클릭하여 확장 패널을 엽니다.  
 3. **Model Catalog**를 클릭하여 사용 가능한 모델 목록으로 이동합니다.
 
@@ -263,7 +263,7 @@ VS Code로 돌아오면 사용할 Foundry 프로젝트를 선택하라는 메시
    **Allow**를 클릭하고 이전 섹션에서 사용한 동일한 GitHub 계정으로 인증합니다.
 
 > [!TIP]
-> 로그인 후 AI Toolkit 확장 패널의 `GitHub` → `My Resources`에서 추가한 모델을 확인할 수 있습니다.
+> 로그인 후 Foundry Toolkit 확장 패널의 `GitHub` → `My Resources`에서 추가한 모델을 확인할 수 있습니다.
 >
 > ![Model collection](https://raw.githubusercontent.com/microsoft/aitour26-WRK540b-prototype-agents-with-the-ai-toolkit-and-model-context-protocol/main/img/model_collection.png)
 >
@@ -408,13 +408,13 @@ Copilot 채팅 창에서 다음 프롬프트를 입력해 보세요:
 I am exploring models for an AI agent that should support Zava - a DIY retailer with 20 stores across the United States and an online channel - on store operations and head office sales analysis. I am evaluating Mistral Small 3.1 and OpenAI GPT-4o. Which one would you recommend for this scenario, and why? Explain the trade-offs between models (e.g., reasoning ability, cost, latency, context length) so that I can make an informed choice. 
 ```
 
-이에 대해 Copilot은 AI Toolkit의 **Get AI Model Guidance** 도구를 호출하여, 사용 사례에 기반한 모델 추천을 제공합니다.  
+이에 대해 Copilot은 Foundry Toolkit의 **Get AI Model Guidance** 도구를 호출하여, 사용 사례에 기반한 모델 추천을 제공합니다.  
 응답에는 도구 호출 세부 정보가 포함된 확장 가능한 섹션과 함께 비교 분석 결과가 표시됩니다.
 
 ![Get AI model guidance](https://raw.githubusercontent.com/microsoft/aitour26-WRK540b-prototype-agents-with-the-ai-toolkit-and-model-context-protocol/main/img/get_ai_model_guidance.png)
 
 > [!NOTE]
-> GitHub Copilot이 응답 생성 시 AI Toolkit 도구를 자동으로 호출하지 않는 경우, 채팅 창에 `#aitk`를 입력하여 사용하려는 도구를 명시적으로 선택한 후 프롬프트를 전송할 수 있습니다.
+> GitHub Copilot이 응답 생성 시 Foundry Toolkit 도구를 자동으로 호출하지 않는 경우, 채팅 창에 `#aitk`를 입력하여 사용하려는 도구를 명시적으로 선택한 후 프롬프트를 전송할 수 있습니다.
 
 ## 6단계: Microsoft Foundry에서 선택한 모델 가져오기
 
@@ -571,12 +571,12 @@ From the attached Zava product catalog, suggest a circuit breaker option that wo
 
 # 에이전트 구축: Agent Builder를 사용하여 Zava 매장 운영 에이전트 Cora 만들기
 
-이 섹션에서는 AI Toolkit의 Agent Builder를 사용하여 Cora 에이전트를 생성하고, 사용자 대신 작업을 수행할 수 있도록 도구를 연결하는 방법을 학습합니다.  
+이 섹션에서는 Foundry Toolkit의 Agent Builder를 사용하여 Cora 에이전트를 생성하고, 사용자 대신 작업을 수행할 수 있도록 도구를 연결하는 방법을 학습합니다.  
 Agent Builder는 프롬프트 엔지니어링과 MCP 서버 같은 도구 통합을 포함하여 에이전트 구축을 위한 엔지니어링 워크플로를 간소화합니다.
 
 ## 1단계: Agent Builder 살펴보기
 
-AI Toolkit 화면에서 **Agent Builder**를 선택하여 접속합니다.
+Foundry Toolkit 화면에서 **Agent Builder**를 선택하여 접속합니다.
 
 ![Agent Builder](https://raw.githubusercontent.com/microsoft/aitour26-WRK540b-prototype-agents-with-the-ai-toolkit-and-model-context-protocol/main/img/agent-builder.png)
 
@@ -739,7 +739,7 @@ Visual Studio Code에서 **F5를 눌러 MCP 서버를 시작**하고, 두 서버
 그 후 `./.vscode/mcp.json` 파일로 이동하여 각 Zava MCP 서버 이름 위의 *Start* 버튼을 클릭합니다.
 
 > [!WARNING]
-> GitHub Copilot Chat을 이전에 사용했다면 **Restart** 버튼이 표시될 수 있습니다. 이 경우 Restart를 클릭하여 AI Toolkit이 이미 실행 중인 MCP 서버에 연결하도록 하세요.
+> GitHub Copilot Chat을 이전에 사용했다면 **Restart** 버튼이 표시될 수 있습니다. 이 경우 Restart를 클릭하여 Foundry Toolkit이 이미 실행 중인 MCP 서버에 연결하도록 하세요.
 
 ---
 
@@ -840,9 +840,9 @@ Which stores have low stock on circuit breakers right now?
 
 # 코드로 마이그레이션
 
-이 섹션에서는 AI Toolkit에서 생성한 에이전트를 코드 기반 워크플로로 마이그레이션하는 방법을 학습합니다.
+이 섹션에서는 Foundry Toolkit에서 생성한 에이전트를 코드 기반 워크플로로 마이그레이션하는 방법을 학습합니다.
 
-AI Toolkit은 Agent Builder에서 생성한 에이전트에 대해 자동으로 코드를 생성해 줍니다. 원하는 SDK와 프로그래밍 언어를 선택할 수 있으며, 생성된 코드 파일을 자신의 애플리케이션에 통합할 수 있습니다.
+Foundry Toolkit은 Agent Builder에서 생성한 에이전트에 대해 자동으로 코드를 생성해 줍니다. 원하는 SDK와 프로그래밍 언어를 선택할 수 있으며, 생성된 코드 파일을 자신의 애플리케이션에 통합할 수 있습니다.
 
 ---
 
@@ -1206,7 +1206,7 @@ Bellevue
 - MCP(Model Context Protocol)를 통해 모델과 도구를 결합하여 내부용 에이전트를 프로토타이핑하는 방법  
 - 추가 커스터마이징 및 구현을 위해 에이전트 코드를 추출하는 방법  
 
-또한 Visual Studio Code의 AI Toolkit을 활용하여 AI 기반 애플리케이션을 효율적으로 개발하는 실습 경험을 쌓았습니다.
+또한 Visual Studio Code의 Foundry Toolkit을 활용하여 AI 기반 애플리케이션을 효율적으로 개발하는 실습 경험을 쌓았습니다.
 
 ---
 

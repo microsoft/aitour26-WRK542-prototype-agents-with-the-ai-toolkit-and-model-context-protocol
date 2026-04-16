@@ -1,14 +1,14 @@
 # 소개
 
 > [!NOTE]
-> 이 워크숍은 **75분** 과정으로, Visual Studio Code에서 **AI Toolkit(AITK)** 및 **Microsoft Foundry**를 사용해 비즈니스 시나리오용 **멀티모달 에이전트**를 프로토타이핑하는 실습 경험을 제공합니다.
+> 이 워크숍은 **75분** 과정으로, Visual Studio Code에서 **Foundry Toolkit** 및 **Microsoft Foundry**를 사용해 비즈니스 시나리오용 **멀티모달 에이전트**를 프로토타이핑하는 실습 경험을 제공합니다.
 
 ## 학습 목표
 
 이 워크숍을 마치면 다음을 수행할 수 있습니다.
-- AITK **Model Catalog**에서 모델을 탐색하고 비교하여, 유스케이스에 가장 적합한 모델을 선택합니다.
-- AITK **Playground**에서 프롬프트와 데이터를 활용해 더 정확하고 근거 있는(grounded) 응답을 얻도록 모델을 보강합니다.
-- AITK **Agent Builder**에서 MCP(Model Context Protocol)를 통해 도구를 연결하여 에이전트를 프로토타이핑합니다.
+- Foundry Toolkit **Model Catalog**에서 모델을 탐색하고 비교하여, 유스케이스에 가장 적합한 모델을 선택합니다.
+- Foundry Toolkit **Playground**에서 프롬프트와 데이터를 활용해 더 정확하고 근거 있는(grounded) 응답을 얻도록 모델을 보강합니다.
+- Foundry Toolkit **Agent Builder**에서 MCP(Model Context Protocol)를 통해 도구를 연결하여 에이전트를 프로토타이핑합니다.
 - 선호하는 SDK와 프로그래밍 언어로 에이전트 프로토타입을 코드로 내보내, 추가 커스터마이징 및 배포를 진행합니다.
 
 ## 리소스
@@ -18,12 +18,12 @@
 
 ## 실습 구성
 
-이 실습은 Microsoft Foundry 및 AI Toolkit을 사용해 멀티모달 에이전트를 프로토타이핑하는 과정을 다음 섹션으로 나누어 안내합니다.
+이 실습은 Microsoft Foundry 및 Foundry Toolkit을 사용해 멀티모달 에이전트를 프로토타이핑하는 과정을 다음 섹션으로 나누어 안내합니다.
 
-1. **Get Started** 워크숍 환경을 설정하고 Azure 및 GitHub에 로그인한 뒤 Visual Studio Code에서 AI Toolkit 확장을 구성합니다.
-2. **Model Selection** AI Toolkit Model Catalog에서 비즈니스 시나리오에 적합한 모델을 탐색/필터/비교하고, GitHub Copilot을 활용해 비교 분석을 수행합니다.
+1. **Get Started** 워크숍 환경을 설정하고 Azure 및 GitHub에 로그인한 뒤 Visual Studio Code에서 Foundry Toolkit 확장을 구성합니다.
+2. **Model Selection** Foundry Toolkit Model Catalog에서 비즈니스 시나리오에 적합한 모델을 탐색/필터/비교하고, GitHub Copilot을 활용해 비교 분석을 수행합니다.
 3. **Model Augmentation** 프롬프트 엔지니어링과 그라운딩(grounding) 데이터를 사용해 선택한 모델의 성능과 유스케이스 적합도를 높입니다.
-4. **Agent Building** AITK Agent Builder로 AI 에이전트를 프로토타이핑합니다. 선택한 모델에 상세한 지시문(instructions)과 MCP 서버 기반 도구(판매 분석 및 재고 관리)를 결합합니다.
+4. **Agent Building** Foundry Toolkit Agent Builder로 AI 에이전트를 프로토타이핑합니다. 선택한 모델에 상세한 지시문(instructions)과 MCP 서버 기반 도구(판매 분석 및 재고 관리)를 결합합니다.
 5. **Migrate to Code** 에이전트 프로토타입을 선호하는 SDK/언어로 코드로 내보내, 추가 커스터마이징 및 배포를 진행합니다.
 6. **Bonus: Evaluations** *(선택)* Agent Builder의 평가 기능으로 에이전트 응답을 수동 평가합니다.
 
@@ -62,6 +62,6 @@ Zava의 매장 관리자와 본사 팀은 다음과 같은 질문에 빠르게 �
 - 매장 관리자와 본사 팀을 위한 **리포팅 표준화**
 - 매장과 온라인 간 재고를 조율해 **옴니채널 운영 지원**
 
-워크숍 전 과정에서 AI Toolkit과 Microsoft Foundry를 사용해 Cora의 기능을 구축, 테스트, 개선하면서 실제 비즈니스 시나리오를 위한 AI 에이전트를 만드는 방법을 학습합니다.
+워크숍 전 과정에서 Foundry Toolkit과 Microsoft Foundry를 사용해 Cora의 기능을 구축, 테스트, 개선하면서 실제 비즈니스 시나리오를 위한 AI 에이전트를 만드는 방법을 학습합니다.
 
 아래에서 워크숍 환경을 설정하려면 **다음**을 눌러 시작하세요.

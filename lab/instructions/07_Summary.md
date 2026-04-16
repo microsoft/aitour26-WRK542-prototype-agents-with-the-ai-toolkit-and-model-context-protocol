@@ -7,7 +7,7 @@ In this lab, you learned how to:
 - Prototype an internal-facing agent by combining models and instructions with tools via MCP (Model Context Protocol)
 - Extract the agent's code for further customization and deployment
 
-Across this process, you also gained hands-on experience with the AI toolkit in Visual Studio Code, which is designed to streamline the development of AI-powered applications.
+Across this process, you also gained hands-on experience with the Foundry Toolkit in Visual Studio Code, which is designed to streamline the development of AI-powered applications.
 
 ## Next steps
 

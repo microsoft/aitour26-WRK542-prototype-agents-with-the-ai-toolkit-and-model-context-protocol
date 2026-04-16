@@ -1,11 +1,11 @@
-# 모델 선택: AI Toolkit Model Catalog 살펴보기
+# 모델 선택: Foundry Toolkit Model Catalog 살펴보기
 
-이 섹션에서는 멀티모달 에이전트 프로젝트에 적합한 모델을 찾기 위해 AI Toolkit의 **Model Catalog**를 탐색하고, 필터링하고, 비교하는 방법을 학습합니다. Model Catalog는 GitHub, Microsoft Foundry, OpenAI 등 다양한 제공자의 모델에 접근할 수 있게 해줍니다.
+이 섹션에서는 멀티모달 에이전트 프로젝트에 적합한 모델을 찾기 위해 Foundry Toolkit의 **Model Catalog**를 탐색하고, 필터링하고, 비교하는 방법을 학습합니다. Model Catalog는 GitHub, Microsoft Foundry, OpenAI 등 다양한 제공자의 모델에 접근할 수 있게 해줍니다.
 
 ## Step 1: 필터를 적용해 후보를 좁히기
 
-1. 왼쪽 사이드바에서 **AI Toolkit** 확장 아이콘을 찾습니다.
-2. AI Toolkit 아이콘을 클릭해 확장 패널을 엽니다.
+1. 왼쪽 사이드바에서 **Foundry Toolkit** 확장 아이콘을 찾습니다.
+2. Foundry Toolkit 아이콘을 클릭해 확장 패널을 엽니다.
 3. **Developer Tools** 아래에서 **Discover** 섹션을 펼친 다음 **Model Catalog**를 클릭해 카탈로그 인터페이스를 엽니다.
 
 ![Model Catalog](../../img/model_catalog.png)
