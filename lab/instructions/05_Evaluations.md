@@ -61,8 +61,8 @@ Ask yourself: **Did the output do what I needed?** If yes, choose thumbs up; if 
 Use built-in evaluators to automatically score your agent's responses.
 
 1. Create a new evaluation by selecting **Add Evaluation**.
-2. Select the following evaluators: `relevance` and `coherence`.
-3. Select the `gpt-4.1-mini` model for the evaluator.
+2. Select the following evaluators: **relevance** and **coherence**.
+3. Select the **gpt-4.1-mini** model for the evaluator.
 4. Select **Run Evaluation** → **Run Evaluation Only**.
 5. Review the scores for each response.
 
