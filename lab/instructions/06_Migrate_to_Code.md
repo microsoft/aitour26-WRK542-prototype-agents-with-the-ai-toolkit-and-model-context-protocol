@@ -1,6 +1,6 @@
 # Bonus: Migrate to Code
 
-> [!NOTE]
+> [!Note]
 > This is a bonus section you can complete if you still have time during the allotted lab slot. Otherwise, you can work through it later at your own pace.
 
 In this section, you will learn how to migrate the agent you've created in Foundry Toolkit to a code-based workflow.
@@ -13,7 +13,7 @@ In Agent Builder, click on the **View Code** button at the top right corner of t
 
 ![View code button.](../../img/view-code.png)
 
-> [!NOTE]
+> [!Note]
 > Make sure you have saved your agent locally, as described in the previous section, otherwise you won't be able to see the **View Code** option.
 
 When prompted, select your preferred client SDK (e.g. *Microsoft Agent Framework*) and programming language (e.g. *Python*). Once the new file is created, save the file to your workspace (under 'src/cora-app.py').
@@ -62,7 +62,7 @@ cd src
 python cora-app.py
 ```
 
-> [!TIP]
+> [!Tip]
 > You might want to customize the user inputs to the agent in the script to test out different scenarios and see how the agent performs. Locate the 'USER_INPUTS' array definition in the script and modify the input values as needed. For example:
 
 ```
