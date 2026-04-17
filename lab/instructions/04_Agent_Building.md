@@ -146,7 +146,7 @@ Now you should see the server listed under the **Tool** section of your agent.
 You're now ready to test whether the Cora agent executes tool calls for store operations. On the right-end chat pane of the **Agent Builder** tab, attach the circuit breaker image, available at the following path:
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 
 Then submit the following textual prompt:

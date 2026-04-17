@@ -155,7 +155,7 @@ Agent Builder に戻り、**Tools** の横の **+** アイコンを選択して�
 Cora が店舗運営向けのツール呼び出しを実行できるかテストします。**Agent Builder** タブ右側のチャット ペインで、次のパスにあるブレーカー画像を添付します。
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 
 次のテキスト プロンプトを送信します。

@@ -360,7 +360,7 @@ Describe what's in this image and what kind of electrical component it appears t
 3. ファイルエクスプローラーが開いたら、アップロードする画像ファイルを選択するよう求められます。以下のパスに移動します。
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions 
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
 ```
 
 次に **circuit_breaker.png** ファイルを選択し、**Open** をクリックします。  

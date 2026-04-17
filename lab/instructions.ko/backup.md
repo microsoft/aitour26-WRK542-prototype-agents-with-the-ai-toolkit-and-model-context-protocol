@@ -360,7 +360,7 @@ Describe what's in this image and what kind of electrical component it appears t
 3. 파일 탐색 창이 열리면 업로드할 이미지 파일을 선택하라는 메시지가 표시됩니다. 다음 경로로 이동합니다:
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions 
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
 ```
 
 그런 다음 **circuit_breaker.png** 파일을 선택하고 **Open**을 클릭합니다.  
