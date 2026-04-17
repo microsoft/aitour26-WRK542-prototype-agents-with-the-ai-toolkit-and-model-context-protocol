@@ -1,7 +1,6 @@
 # Bonus: Migrate to Code
 
-> [!Note]
-> This is a bonus section you can complete if you still have time during the allotted lab slot. Otherwise, you can work through it later at your own pace.
+> [!Note] This is a bonus section you can complete if you still have time during the allotted lab slot. Otherwise, you can work through it later at your own pace.
 
 In this section, you will learn how to migrate the agent you've created in Foundry Toolkit to a code-based workflow.
 
