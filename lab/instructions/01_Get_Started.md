@@ -56,8 +56,8 @@ You'll be prompted with a popup to confirm with the Azure login. Click **Allow**
 
 Next, you'll be redirected to a window to complete the login process. Enter the following credentials:
 
-- Email: <+++@lab.CloudPortalCredential>(User1).Username+++
-- TAP: <+++@lab.CloudPortalCredential>(User1).TAP+++
+-  Email: +++@lab.CloudPortalCredential(User1).Username+++
+-  TAP: +++@lab.CloudPortalCredential(User1).TAP+++
 
 > [!NOTE]
 > You'll be asked to confirm if you want to allow the automatic sign-in to all desktop apps and websites on the device. Click **Yes** to proceed.
