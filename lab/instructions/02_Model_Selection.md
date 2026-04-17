@@ -114,8 +114,9 @@ Describe what's in this image and what kind of electrical component it appears t
 C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 
-Then select the file named **circuit_breaker.png** and click **Open**.
-![Image File Path](../../img/image_file_path.png)
+Then click **Open**.
+
+![Image File Path](../../img/open-image.png)
 
 1. Send the multimodal prompt on both models simultaneously.
 
