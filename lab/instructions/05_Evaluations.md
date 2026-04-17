@@ -1,6 +1,6 @@
 # Evaluate Your Agent Responses
 
-In this section, you will use both manual and AI-assisted evaluation to assess a dataset of your agent's responses in Agent Builder.
+In this section, you will use both manual and AI-assisted evaluation to assess your agent's responses in Agent Builder.
 
 ## Step 1: Add Evaluation Data
 
@@ -10,7 +10,7 @@ In Agent Builder, switch to the **Evaluation** tab. Each evaluation row needs a 
 
 ### Add Data Manually
 
-You can manually add your own queries in the **Evaluation** tab.
+You can add queries manually in the **Evaluation** tab.
 
 1. Click **Add an Empty Row** four times.
 2. Copy and paste the queries from the table below.
@@ -31,7 +31,7 @@ When complete, your evaluation panel should look like this:
 
 ## Step 2: Assess Your Agent Output
 
-With your dataset prepared, you can run rows one at a time or run multiple rows together. By default, all rows are selected. Select the **Run Response** icon (the play button) to run the selected rows.
+With your dataset prepared, you can run rows individually or in groups. By default, all rows are selected. Select the **Run Response** icon (the play button) to run the selected rows.
 
 ![Run button.](../../img/evaluation-run-responses.png)
 
@@ -39,7 +39,7 @@ The model will generate a response for each **User Query**. Once a response is g
 
 ![Manual evaluation.](../../img/evaluations-review-responses.png)
 
-Use **thumbs up** if the response met your expectations: accurate, relevant, clear, and helpful. Use **thumbs down** if it was incorrect, incomplete, confusing, off-topic, or not useful.
+Use **thumbs up** if the response meets your expectations: accurate, relevant, clear, and helpful. Use **thumbs down** if it is incorrect, incomplete, confusing, off-topic, or not useful.
 
 Ask yourself: **Did the output do what I needed?** If yes, choose thumbs up; if not, choose thumbs down.
 
@@ -70,3 +70,8 @@ Use built-in evaluators to automatically score your agent's responses.
 > The first time you run AI-assisted evaluations, the AI Toolkit will download and install the required dependencies. This may take a moment.
 
 ![AI-assisted evaluation.](../../img/evaluation-ai-assisted-eval.png)
+
+## Key Takeaways
+
+- Manual evaluation helps you verify whether a response is accurate, relevant, and useful.
+- AI-assisted evaluation uses built-in evaluators to score responses more consistently and at a larger scale.
