@@ -21,7 +21,7 @@ When prompted, select your preferred client SDK (e.g. *Microsoft Agent Framework
 
 Review the generated file for placeholders or required changes.
 
-## (Optional) Bonus
+## Run the Agent
 
 If you'd like to run the code, save the file and follow the comments at the top. The exact steps depend on the SDK and language you selected.
 
@@ -35,11 +35,11 @@ For example, if you selected the **Microsoft Agent Framework** SDK with **Python
 
 3. Open a new terminal in Visual Studio Code by selecting **Terminal** -> **New Terminal** from the top menu.
 
-4. Install the required dependencies by using:
+<!-- 4. Install the required dependencies by using:
 
 ```
 pip install --no-deps agent-framework==1.0.0rc3 agent-framework-core==1.0.0rc3 agent-framework-azure-ai==1.0.0rc3
-```
+``` -->
 
 5. Authenticate to Azure:
 
