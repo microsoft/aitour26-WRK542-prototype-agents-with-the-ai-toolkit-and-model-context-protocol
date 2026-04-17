@@ -116,17 +116,13 @@ To address that, we'll connect Cora to two MCP servers configured for this works
 - **Sales Analysis MCP server** (sales metrics + semantic product search)
 - **Inventory MCP server** (stock levels + safe transfers)
 
-To start the servers, within Visual Studio Code, **press <kbd>CTRL+F5</kbd> to start the MCP Servers** and wait for both servers to initialize. You should see two new terminal windows open, one for each server.
-Double check that you get the message `Uvicorn is running on port XXXX` in both terminal windows, indicating that the servers are running.
+In Visual Studio Code, start the servers by selecting **Terminal > Run Tasks > Start MCP Servers**.
+
+![Start MCP Servers](../../img/start-mcp-servers.png)
+
+You should see two new terminal windows open, one for each server. Double check that you get the message `Uvicorn is running on port XXXX` in both terminal windows, indicating that the servers are running.
 
 ![MCP Servers running](../../img/mcp_servers_running.png)
-
-> [!TIP]
-> Alternatively, you can also start the MCP servers through the UI, by clicking on the 'Run'->'Run without debugging'.
-> ![Run and debug](../../img/run-and-debug.png)
-
-> [!WARNING]
-> If the servers fail to start at the first attempt with an importlib error, please try running them again. This is a known timing issue between Python's bytecode compilation and Windows file system operations. Simply re-run the servers - the second attempt will succeed because all necessary files are already cached.
 
 ## Step 5: Add the MCP Server Sales Tools to the Agent
 
