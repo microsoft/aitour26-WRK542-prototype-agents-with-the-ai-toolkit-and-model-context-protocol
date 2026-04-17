@@ -46,6 +46,8 @@ In your Visual Studio Code instance, you should be able to see the Foundry Toolk
 
 Next, click on **Set Default Project** -> **Sign in to Azure**.
 
+![set default project](../../img/set-default-project.png)
+
 <!--![Set Default Project](../../img/set_default_project.png)-->
 
 You'll be prompted with a popup to confirm with the Azure login. Click **Allow**.
