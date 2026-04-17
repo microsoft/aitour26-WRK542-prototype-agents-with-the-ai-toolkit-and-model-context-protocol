@@ -14,7 +14,7 @@ On the top of the page you'll find the most popular models; scroll down to see t
 
 Since the list is quite extensive, you can use the filtering options to narrow down the selection based on your requirements.
 
-![Filter Options](../../img/filter_options.png)
+![Filter Options](../../img/filter-models.png)
 
 ### Filter by Hosting Provider
 
