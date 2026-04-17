@@ -116,7 +116,7 @@ To address that, we'll connect Cora to two MCP servers configured for this works
 - **Sales Analysis MCP server** (sales metrics + semantic product search)
 - **Inventory MCP server** (stock levels + safe transfers)
 
-In Visual Studio Code, start the servers by selecting **Terminal > Run Tasks > Start MCP Servers**.
+In Visual Studio Code, start the servers by selecting **Terminal > Run Task... > Start MCP Servers**.
 
 ![Start MCP Servers](../../img/start-mcp-servers.png)
 
