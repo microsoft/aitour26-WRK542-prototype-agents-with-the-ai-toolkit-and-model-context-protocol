@@ -13,7 +13,7 @@ If you will be delivering this session, check the [session-delivery-sources](./s
 
 ### Session Description
 
-Learn how to build a conversational AI agent in VS Code using the AI toolkit, Microsoft Foundry and the Model Context Protocol (MCP). You'll explore and compare models to find the best fit for your agent, configure its instructions and enable sales analysis and product inventory management.
+Learn how to build a conversational AI agent in VS Code using the Microsoft Foundry Toolkit and the Model Context Protocol (MCP). You'll explore and compare models to find the best fit for your agent, configure its instructions and enable sales analysis and product inventory management. 
 
 ### 🧠 Learning Outcomes
 
