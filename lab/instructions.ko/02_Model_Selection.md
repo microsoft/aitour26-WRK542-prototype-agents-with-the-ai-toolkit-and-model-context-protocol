@@ -115,7 +115,7 @@
 3. 업로드할 이미지 파일을 선택하는 탐색 창이 표시됩니다. 아래 경로로 이동합니다.
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 
 그 다음 **circuit_breaker.png** 파일을 선택하고 **Open**을 클릭합니다.

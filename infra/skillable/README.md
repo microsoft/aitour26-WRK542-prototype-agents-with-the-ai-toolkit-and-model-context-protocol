@@ -162,7 +162,7 @@ For Skillable labs, if you encounter issues with the automated setup:
 
 1. **Check LCA Logs**: Review the log file at `C:\logs\vm-init_<timestamp>.log`
 2. **Verify Deployment**: Check that the ARM deployment completed successfully in the Azure portal
-3. **Check .env File**: Verify that `C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\.env` exists and contains all required variables
+3. **Check .env File**: Verify that `C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\.env` exists and contains all required variables
 4. **Verify Role Assignments**: Ensure that LCA-1 successfully assigned the necessary roles
 5. **Manual Retry**: If an LCA fails, you can manually execute it from PowerShell as an administrator
 

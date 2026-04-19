@@ -360,7 +360,7 @@ Describe what's in this image and what kind of electrical component it appears t
 3. 파일 탐색 창이 열리면 업로드할 이미지 파일을 선택하라는 메시지가 표시됩니다. 다음 경로로 이동합니다:
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
 ```
 
 그런 다음 **circuit_breaker.png** 파일을 선택하고 **Open**을 클릭합니다.  
@@ -499,7 +499,7 @@ Stick to Zava store operations, sales analysis, and inventory topics. If asked s
 이제 시스템 프롬프트를 설정했으므로, 멀티모달 사용자 프롬프트로 시스템을 테스트해 보겠습니다. Playground 채팅에서 이미지 첨부 아이콘을 클릭하여 대화 맥락에 이미지를 업로드합니다. 그런 다음 아래 경로에 있는 차단기 이미지를 선택합니다:
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
 ```
 
 다음 사용자 프롬프트와 함께 사용하세요:
@@ -536,7 +536,7 @@ What's the weather like in San Francisco today?
 > [!TIP]
 > 열리는 창에서 다음 경로를 통해 데이터 디렉터리를 찾을 수 있습니다:
 > ```
-> C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\data
+> C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\data
 > ```
 
 ![Uploading Grounding Data File](https://raw.githubusercontent.com/microsoft/aitour26-WRK540b-prototype-agents-with-the-ai-toolkit-and-model-context-protocol/main/img/uploading_grounding_data_file.png)

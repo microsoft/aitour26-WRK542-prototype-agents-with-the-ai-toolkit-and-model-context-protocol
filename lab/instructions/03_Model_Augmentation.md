@@ -34,7 +34,7 @@ This prompt defines Cora's role, response style, and transfer safety rule.
 Now that we configured the system prompt, let's test the system with a multimodal user prompt. In the playground chat, click the image attachment icon to upload an image in the conversation context. Then select the circuit breaker image available at the following path:
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 
 Combine it with the following user prompt:
@@ -65,7 +65,7 @@ Next, add grounding data so the model can answer catalog questions without makin
 > In the window that opens, you can find the data directory at the following path:
 >
 > ```
->C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\data
+>C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\data
 > ```
 
 ![Uploading Grounding Data File](../../img/uploading_grounding_data_file.png)

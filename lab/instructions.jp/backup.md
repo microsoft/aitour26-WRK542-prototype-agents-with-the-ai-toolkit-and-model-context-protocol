@@ -360,7 +360,7 @@ Describe what's in this image and what kind of electrical component it appears t
 3. ファイルエクスプローラーが開いたら、アップロードする画像ファイルを選択するよう求められます。以下のパスに移動します。
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
 ```
 
 次に **circuit_breaker.png** ファイルを選択し、**Open** をクリックします。  
@@ -499,7 +499,7 @@ Stick to Zava store operations, sales analysis, and inventory topics. If asked s
 システムプロンプトを設定したので、マルチモーダルユーザープロンプトでシステムをテストしてみましょう。Playground のチャットで画像添付アイコンをクリックして、会話コンテキストに画像をアップロードします。次に、以下のパスにあるブレーカーの画像を選択します。
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
 ```
 
 以下のユーザープロンプトと一緒に使用してください。
@@ -536,7 +536,7 @@ What's the weather like in San Francisco today?
 > [!TIP]
 > 開いたウィンドウで以下のパスからデータディレクトリを見つけることができます。
 > ```
-> C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\data
+> C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\data
 > ```
 
 ![Uploading Grounding Data File](https://raw.githubusercontent.com/microsoft/aitour26-WRK540b-prototype-agents-with-the-ai-toolkit-and-model-context-protocol/main/img/uploading_grounding_data_file.png)
