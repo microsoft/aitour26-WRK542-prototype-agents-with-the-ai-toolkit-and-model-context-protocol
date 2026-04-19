@@ -49,7 +49,7 @@ Always respond in Korean.
 시스템 프롬프트를 설정했으니, 이제 멀티모달 사용자 프롬프트로 테스트합니다. Playground 채팅에서 이미지 첨부 아이콘을 클릭해 대화 컨텍스트에 이미지를 업로드하고, 아래 경로의 차단기(circuit breaker) 이미지를 선택합니다.
 
 ```    
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 
 그리고 다음 사용자 프롬프트를 함께 입력합니다.
@@ -92,7 +92,7 @@ What’s the weather like in Seoul today?
 > [!TIP]
 > 파일 선택 창에서 데이터 디렉터리는 아래 경로에 있습니다.
 > ```
->C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\data
+>C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\data
 > ```
 
 ![Uploading Grounding Data File](../../img/uploading_grounding_data_file.png)

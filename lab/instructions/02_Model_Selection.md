@@ -111,7 +111,7 @@ Describe what's in this image and what kind of electrical component it appears t
 1. You'll be prompted with a browsing window to select the image file attachment to upload. Navigate to the following location:
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 
 Then click **Open**.

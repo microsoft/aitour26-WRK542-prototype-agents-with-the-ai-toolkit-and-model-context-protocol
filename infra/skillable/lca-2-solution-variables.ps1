@@ -23,7 +23,7 @@ $SubId = "@lab.CloudSubscription.Id"
 
 # Resource group and target path
 $ResourceGroup = "rg-ai-toolkit-mcp"
-$targetPath = "C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src"
+$targetPath = "C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src"
 
 # --- Azure login ---
 Log "Authenticating to Azure tenant $TenantId, subscription $SubId"

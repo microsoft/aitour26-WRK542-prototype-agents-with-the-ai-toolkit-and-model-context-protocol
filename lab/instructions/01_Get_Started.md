@@ -21,7 +21,7 @@ Open the terminal from the taskbar at the bottom of the screen.
 Copy and paste the following command block into the terminal and press **Enter**. It updates the workshop repository, activates the Python virtual environment, and opens the project in VS Code.
 
 ```powershell
-; cd $HOME\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\ `
+; cd $HOME\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\ `
 ; git pull `
 ; Remove-Item -Recurse -Force .git `
 ; .\.venv\Scripts\activate `

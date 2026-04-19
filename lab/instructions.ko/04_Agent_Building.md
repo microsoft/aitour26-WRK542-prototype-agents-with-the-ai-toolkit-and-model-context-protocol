@@ -155,7 +155,7 @@ Agent Builder로 돌아가서 **Tools** 옆의 **+** 아이콘을 선택해 도�
 이제 Cora 에이전트가 매장 운영을 위한 도구 호출을 수행하는지 테스트할 준비가 됐습니다. **Agent Builder** 탭의 오른쪽 채팅 패널에서 아래 경로에 있는 차단기 이미지를 첨부합니다.
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 
 그 다음 아래 텍스트 프롬프트를 전송합니다.

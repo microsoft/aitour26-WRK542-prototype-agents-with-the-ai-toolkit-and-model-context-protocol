@@ -110,7 +110,7 @@ In Japanese, describe what's in this image and what kind of electrical component
 
 3. 画像ファイルを選択するためのブラウジングウィンドウが表示されます。以下のパスに移動します：
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 次に、**circuit_breaker.png** という名前のファイルを選択して **Open** をクリックします。
 ![Image File Path](../../img/image_file_path.png)

@@ -49,7 +49,7 @@ Always respond in Japanese.
 システムプロンプトを設定したので、マルチモーダルなユーザー プロンプトで試します。Playground のチャットで画像添付アイコンをクリックし、会話コンテキストに画像をアップロードします。次のパスにあるブレーカー画像を選択します。
 
 ```    
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 
 次のユーザー プロンプトと組み合わせます。
@@ -86,7 +86,7 @@ What’s the weather like in Tokyo today?
 > [!TIP]
 > 開くウィンドウで、データ ディレクトリは次のパスにあります。
 > ```
->C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-Foundry-toolkit-and-model-context-protocol\data
+>C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\data
 > ```
 
 ![Uploading Grounding Data File](../../img/uploading_grounding_data_file.png)
