@@ -21,9 +21,9 @@ You can add queries manually in the **Evaluation** tab.
     | User Query |
     | -------------- |
     | `What were the top 3 categories by revenue in 2025 for all stores?` |
-    | What products are at risk of being out of stock this week in Seattle? |
-    | Summarize online vs physical sales performance last month. |
-    | Do we have enough circuit breakers for this weekend's Bellevue promotion? |
+    | `What products are at risk of being out of stock this week in Seattle?` |
+    | `Summarize online vs physical sales performance last month.` |
+    | `Do we have enough circuit breakers for this weekend's Bellevue promotion?` |
 
 When complete, your evaluation panel should look like this:
 
