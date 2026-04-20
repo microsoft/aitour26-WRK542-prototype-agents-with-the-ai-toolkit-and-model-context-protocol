@@ -39,7 +39,7 @@ Locate **Llama-4-Maverick-17B-128E-Instruct-FP8** in the filtered results. It's 
 
 ![Add Model](../../img/add_model.png)
 
-1. Drag the slider of the **Token Per Minute** rate to the right to increase it to 120K. Leave the other parameters as default and click on **Deploy to Microsoft Foundry** to provision an instance of the model to your subscription.
+1. Drag the slider of the **Token Per Minute** rate to the right to increase it to approximately 120K. Leave the other parameters as default and click on **Deploy to Microsoft Foundry** to provision an instance of the model to your subscription.
 
 ![Deployment Configuration](../../img/deployment_configuration.png)
 
