@@ -4,7 +4,10 @@
 		{
 			"label": "MCP: Sales Analysis (8004)",
 			"type": "shell",
-			"command": "python",
+			"command": "${workspaceFolder}/.venv/bin/python",
+			"windows": {
+				"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe"
+			},
 			"args": ["-m", "mcp_servers.sales_analysis"],
 			"isBackground": true,
 			"problemMatcher": [
@@ -35,7 +38,10 @@
 		{
 			"label": "MCP: Inventory (8005)",
 			"type": "shell",
-			"command": "python",
+			"command": "${workspaceFolder}/.venv/bin/python",
+			"windows": {
+				"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe"
+			},
 			"args": ["-m", "mcp_servers.inventory_server"],
 			"isBackground": true,
 			"problemMatcher": [
@@ -75,8 +81,13 @@
 		{
 			"label": "Docs: Install Python Dependencies",
 			"type": "shell",
-			"command": "pip",
+			"command": "${workspaceFolder}/.venv/bin/python",
+			"windows": {
+				"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe"
+			},
 			"args": [
+				"-m",
+				"pip",
 				"install",
 				"-r",
 				"requirements.txt"
@@ -89,8 +100,13 @@
 		{
 			"label": "Docs: Run Server",
 			"type": "shell",
-			"command": "mkdocs",
+			"command": "${workspaceFolder}/.venv/bin/python",
+			"windows": {
+				"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe"
+			},
 			"args": [
+				"-m",
+				"mkdocs",
 				"serve"
 			],
 			"problemMatcher": [],
