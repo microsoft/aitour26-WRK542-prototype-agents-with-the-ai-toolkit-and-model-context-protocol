@@ -1,7 +1,7 @@
 # はじめに（セットアップ）
 
 > [!TIP]
-> **AI Toolkit（AITK）** とは？ [The AI Toolkit (AITK)](https://code.visualstudio.com/docs/intelligentapps/overview) は Visual Studio Code の拡張機能で、さまざまな AI モデルやサービスにアクセスして操作するための統合 UI を提供します。複数プロバイダー（プロプライエタリ／オープンソース）にまたがるモデルを、GitHub、Microsoft Foundry、ローカルなど複数のホスティング形態で探索・比較・利用できます。AITK を使うことで、モデル選定・プロンプトエンジニアリング・エージェントの試作／テストまでをエディター内で完結させ、生成 AI 開発のワークフローを効率化できます。
+> **Foundry Toolkit** とは？ [The Foundry Toolkit](https://code.visualstudio.com/docs/intelligentapps/overview) は Visual Studio Code の拡張機能で、さまざまな AI モデルやサービスにアクセスして操作するための統合 UI を提供します。複数プロバイダー（プロプライエタリ／オープンソース）にまたがるモデルを、GitHub、Microsoft Foundry、ローカルなど複数のホスティング形態で探索・比較・利用できます。Foundry Toolkit を使うことで、モデル選定・プロンプトエンジニアリング・エージェントの試作／テストまでをエディター内で完結させ、生成 AI 開発のワークフローを効率化できます。
 
 ## Windows にサインイン
 
@@ -15,7 +15,7 @@
 
 ## GitHub にログイン
 
-このワークショップでは、AI Toolkit の Model Catalog にある GitHub ホストモデルへアクセスしたり、Visual Studio Code の GitHub Copilot 機能を使うために、GitHub Enterprise（GHE）アカウントを利用します。
+このワークショップでは、Foundry Toolkit の Model Catalog にある GitHub ホストモデルへアクセスしたり、Visual Studio Code の GitHub Copilot 機能を使うために、GitHub Enterprise（GHE）アカウントを利用します。
 
 以下の手順で、提供された GitHub Enterprise（GHE）アカウントでサインインします。
 
@@ -50,12 +50,12 @@
 
 ## Azure に認証
 
-Visual Studio Code では、AI Toolkit 拡張機能がすでにインストールされているはずです。クリックして AI Toolkit のサイドバーを開きます。
+Visual Studio Code では、Foundry Toolkit 拡張機能がすでにインストールされているはずです。クリックして Foundry Toolkit のサイドバーを開きます。
 
 ![Installed extensions](../../img/installed_extensions.png)
 
 > [!TIP]
-> AITK アイコンが見当たらない場合、サイドバー下部の省略記号（...）をクリックして、インストール済み拡張機能の一覧を表示してください。
+> Foundry Toolkit アイコンが見当たらない場合、サイドバー下部の省略記号（...）をクリックして、インストール済み拡張機能の一覧を表示してください。
 
 > [!WARNING]
 > ラボ手順の一貫性を保ち、予期しない問題を避けるため、VS Code 拡張機能の自動更新は無効化されています。ラボ中は拡張機能を更新しないでください。
@@ -134,12 +134,12 @@ If you encounter issues when logging in with the given GHE account, you can alwa
     ![GitHub Repo Banner](../../img/github_repo_banner.png)
 
 > [!WARNING]
-> If your personal GitHub account is a free-tier one, you will have some limitations in the range of GitHub-hosted models you can access in the AI Toolkit Model Catalog. For example, you won't be able to use the GPT-5 family of models. You can still proceed with the lab using available models (recommended: OpenAI gpt-4.1).
+> If your personal GitHub account is a free-tier one, you will have some limitations in the range of GitHub-hosted models you can access in the Foundry Toolkit Model Catalog. For example, you won't be able to use the GPT-5 family of models. You can still proceed with the lab using available models (recommended: OpenAI gpt-4.1).
 
 3. Click on **Sign in** and enter your GitHub credentials to log in. If you just created your account, use the username and password you set during the sign-up process. -->
 
 
 ## 準備完了
 
-これで、Visual Studio Code 上で AI Toolkit と Microsoft Foundry ホストモデルを使うためのセットアップは完了です。次は Model Catalog を探索し、モデルと対話するところから始めます。
+これで、Visual Studio Code 上で Foundry Toolkit と Microsoft Foundry ホストモデルを使うためのセットアップは完了です。次は Model Catalog を探索し、モデルと対話するところから始めます。
 **Next** をクリックして、ラボの次のセクションへ進んでください。

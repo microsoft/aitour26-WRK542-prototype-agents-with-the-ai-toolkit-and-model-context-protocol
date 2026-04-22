@@ -1,40 +1,24 @@
 # Get started
 
 > [!TIP]
-> What is the **AI Toolkit(AITK)**? [The AI Toolkit (AITK)](https://code.visualstudio.com/docs/intelligentapps/overview) is an extension for Visual Studio Code that provides a unified interface to access and interact with various AI models and services. It allows users to easily explore, compare, and utilize different AI models from multiple providers, both proprietary and open source, hosted on several platforms, such as Github, Microsoft Foundry or even locally. With AITK, developers can streamline their Generative AI development workflow by integrating model selection, prompt engineering, and agent prototyping and testing directly within their code editor.
+> **Foundry Toolkit** is the VS Code extension you'll use in this lab to explore models, test prompts, and prototype the agent.
 
 ## Sign in to Windows
 
-As a first step, login into the lab Virtual Machine using the credentials you can find in the **Resources tab** under the Skillable VM name.
+Log in to the lab Virtual Machine using the credentials in the **Resources tab** under the Skillable VM name.
 
 ![VM login credentials](../../img/vm_login_credentials.png)
 
 > [!TIP]
-> First time using **Skillable?** The "T" icon (e.g., +++Admin+++) indicates values that are automatically input for you at the current cursor location in VM, with one click. This reduces your effort and minimizes input errors.
-> Also, you can always click on the images to enlarge them, if needed.
-
-## Login to GitHub
-
-For this workshop, you'll be using a GitHub Enterprise (GHE) account to access GitHub-hosted models in the AI Toolkit Model Catalog and GitHub Copilot features in Visual Studio Code.
-
-Follow the instructions below to sign-in with a given GitHub Enterprise (GHE) account.
-
-1. Open the edge browser from the taskbar. You'll get a browser tab with the [GHE sign-in page](https://github.com/enterprises/skillable-events) already opened for you.
-
-2. Click on **Continue** and sign-in with the following credentials:
-   -  Username: +++@lab.CloudPortalCredential(User1).Username+++
-   -  TAP: +++@lab.CloudPortalCredential(User1).TAP+++
-
-Once you get the **Overview** page of the *Skillable Events* GitHub org, that means you are successfully logged in. You can hide the browser tab and move forward with opening the workshop environment in Visual Studio Code.
+> When you see the "T" icon (for example, +++Admin+++), click it to auto-fill the current field. You can also click any image to enlarge it.
 
 ## Open the Workshop Environment in Visual Studio Code
 
-Follow these steps to open the workshop environment in Visual Studio Code.
-Open the terminal by clicking on the terminal icon in the taskbar at the bottom of the screen.
+Open the terminal from the taskbar at the bottom of the screen.
 
 ![Open terminal](../../img/open_terminal.png)
 
-Copy and paste the following command block to the terminal and press **Enter**. The following command block updates the workshop repository, activates the Python virtual environment, and opens the project in VS Code.
+Copy and paste the following command block into the terminal and press **Enter**. It updates the workshop repository, activates the Python virtual environment, and opens the project in VS Code.
 
 ```powershell
 ; cd $HOME\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\ `
@@ -50,17 +34,19 @@ Copy and paste the following command block to the terminal and press **Enter**. 
 
 ## Authenticate to Azure
 
-In your Visual Studio Code instance, you should be able to see the AI Toolkit extension already installed. Click on it to open the AI Toolkit sidebar.
+In your Visual Studio Code instance, you should be able to see the Foundry Toolkit extension already installed. Click on it to open the Foundry Toolkit sidebar.
 
 ![Installed extensions](../../img/installed_extensions.png)
 
 > [!TIP]
-> If you don't see the AITK icon, click on the ellipsis (...) at the bottom of the sidebar to see the full list of installed extensions.
+> If you don't see the Foundry Toolkit icon, click on the ellipsis (...) at the bottom of the sidebar to see the full list of installed extensions.
 
 > [!WARNING]
 > Auto-update of the VS Code extensions has been disabled to ensure consistency with the lab manual instructions and avoid unexpected issues. Please refrain from updating these extensions during the lab.
 
 Next, click on **Set Default Project** -> **Sign in to Azure**.
+
+![set default project](../../img/set-default-project.png)
 
 <!--![Set Default Project](../../img/set_default_project.png)-->
 
@@ -69,6 +55,7 @@ You'll be prompted with a popup to confirm with the Azure login. Click **Allow**
 ![Azure Login Popup](../../img/azure_login_popup.png)
 
 Next, you'll be redirected to a window to complete the login process. Enter the following credentials:
+
 -  Email: +++@lab.CloudPortalCredential(User1).Username+++
 -  TAP: +++@lab.CloudPortalCredential(User1).TAP+++
 
@@ -81,65 +68,7 @@ Back in your VS Code instance, you'll be asked to select the Foundry project to 
 
 If the login process was successful, you should now see your project listed under **My resources**. From there, you'll be able to access and manage the project resources, like models, agents and tools.
 
-## Enable GitHub Copilot AI features
-
-In this workshop, you'll also be using GitHub Copilot AI features in Visual Studio Code to assist you in your development tasks. To enable GitHub Copilot, you need to sign-in with the same GitHub Enterprise (GHE) account used previously in the Edge browser. Follow the steps below to sign-in to GitHub Copilot:
-
-1. Click on the **Copilot** icon in the right bottom corner of the VS Code window, accompanied by the text "Signed out".
-1. Next, click on **Sign in to use AI features** -> **Continue with GitHub**.
-
-    ![GitHub Copilot Sign In](../../img/github_copilot_sign_in.png)
-
-    Then select `Continue with GitHub`
-
-    ![Select GitHub](../../img/sign-into-github.png)
-
-1. A new browser tab will open, prompting you to authorize VS Code. Click on **Continue with GitHub** to sign-in with the same GHE account you used before.
-
-    ![Authorize GitHub Copilot](../../img/authorize_github_copilot.png)
-
-    In the next window, click on **Authorize Visual Studio Code**.
-
-    ![Authorize VS Code](../../img/authorize-vs-code.png)
-
-1. Select `Open` to continue.
-
-<!-- ## Got issues when logging in with GitHub?
-
-> [!NOTE]
-> If you are properly logged in with the GHE account as per previous step, please ignore this section and move to the next one.
-
-If you encounter issues when logging in with the given GHE account, you can always use your own, by following the steps below:
-
-1. Navigate to the [GitHub repo](https://aka.ms/msignite25-lab512) hosting the lab code and resources. 
-
-    > [!TIP]
-    > Click the Star button in the top right corner, this will help you easily find it later.
-
-2. To launch a codespace, you need a **GitHub account**. 
-
-    > [!NOTE]
-    > If you already have a GitHub account, you can move to step 3 directly.
-
-    To create one, click on the **Sign up** button and follow the instructions below:
-    - In the new window, enter a personal email address, create a password, and choose a username.
-    - Select your Country/Region and agree to the terms of service.
-    - Click on the **Create account** button and wait for the verification email to arrive in your inbox.
-
-    ![GitHub Account Sign Up](../../img/github_signup.png)
-
-    - Copy the verification code from the email and paste it into the verification field on the GitHub website. Then click on **Continue**.
-    - Once the account is created, you'll be redirected back to the GitHub repo page and you'll see a green banner at the top, like the one in the screenshot below.
-
-    ![GitHub Repo Banner](../../img/github_repo_banner.png)
-
-> [!WARNING]
-> If your personal GitHub account is a free-tier one, you will have some limitations in the range of GitHub-hosted models you can access in the AI Toolkit Model Catalog. For example, you won't be able to use the GPT-5 family of models. You can still proceed with the lab using available models (recommended: OpenAI gpt-4.1).
-
-3. Click on **Sign in** and enter your GitHub credentials to log in. If you just created your account, use the username and password you set during the sign-up process. -->
-
-
 ## Ready to start
 
-That covers the necessary setup to work with the AI Toolkit in VScode and Microsoft Foundry hosted models. We will now move forward to begin exploring the Model Catalog and interacting with the models.
+That covers the necessary setup to work with the Foundry Toolkit in VS Code and Microsoft Foundry hosted models. We will now move on to the Model Catalog and start interacting with the models.
 Click **Next** to proceed to the following section of the lab.

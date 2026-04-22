@@ -1,14 +1,14 @@
 # はじめに
 
 > [!NOTE]
->このワークショップは **75 分**のハンズオン形式です。Visual Studio Code の AI Toolkit（AITK）と Microsoft Foundry を使って、業務シナリオ向けのマルチモーダル エージェントをプロトタイピングします。
+>このワークショップは **75 分**のハンズオン形式です。Visual Studio Code の Foundry Toolkit と Microsoft Foundry を使って、業務シナリオ向けのマルチモーダル エージェントをプロトタイピングします。
 
 ## 学習目標
 
 このワークショップを終えると、次のことができるようになります。
-- AITK の Model Catalog でモデルを探索・比較し、ユースケースに最適なモデルを選定できる
-- AITK Playground でプロンプトやデータを使ってモデルを拡張し、より正確で根拠のある（grounded）応答を得られる
-- AITK Agent Builder を使い、MCP（Model Context Protocol）経由でツールと接続して、モデル＋指示＋ツールを組み合わせたエージェントを試作できる
+- Foundry Toolkit の Model Catalog でモデルを探索・比較し、ユースケースに最適なモデルを選定できる
+- Foundry Toolkit Playground でプロンプトやデータを使ってモデルを拡張し、より正確で根拠のある（grounded）応答を得られる
+- Foundry Toolkit Agent Builder を使い、MCP（Model Context Protocol）経由でツールと接続して、モデル＋指示＋ツールを組み合わせたエージェントを試作できる
 - 好みの SDK とプログラミング言語で、エージェントのプロトタイプをコードにエクスポートして追加カスタマイズやデプロイに進められる
 
 ## リソース
@@ -18,12 +18,12 @@
 
 ## ラボ構成
 
-このラボは、Microsoft Foundry と AI Toolkit を使ってマルチモーダル エージェントをプロトタイピングする流れに沿って、次のセクションで構成されています。
+このラボは、Microsoft Foundry と Foundry Toolkit を使ってマルチモーダル エージェントをプロトタイピングする流れに沿って、次のセクションで構成されています。
 
-1. **Get Started** ワークショップ環境のセットアップ、Azure と GitHub へのサインイン、VS Code に AI Toolkit 拡張機能を構成します。
-2. **Model Selection** AITK Model Catalog を探索し、要件に合うモデルを発見・フィルター・比較します。比較分析には GitHub Copilot も活用します。
+1. **Get Started** ワークショップ環境のセットアップ、Azure と GitHub へのサインイン、VS Code に Foundry Toolkit 拡張機能を構成します。
+2. **Model Selection** Foundry Toolkit Model Catalog を探索し、要件に合うモデルを発見・フィルター・比較します。比較分析には GitHub Copilot も活用します。
 3. **Model Augmentation** プロンプトエンジニアリングとグラウンディング データを使って、選択したモデルの性能とユースケース適合度を高めます。
-4. **Agent Building** AITK Agent Builder で AI エージェントを試作します。選択したモデルに詳細な指示と MCP サーバー経由のツールを組み合わせ、販売分析と在庫管理の操作を行えるようにします。
+4. **Agent Building** Foundry Toolkit Agent Builder で AI エージェントを試作します。選択したモデルに詳細な指示と MCP サーバー経由のツールを組み合わせ、販売分析と在庫管理の操作を行えるようにします。
 5. **Migrate to Code** エージェントのプロトタイプを、好みの SDK と言語でコードとしてエクスポートし、追加カスタマイズやデプロイに備えます。
 6. **Bonus: Evaluations** *(任意)* Agent Builder の評価機能を使い、エージェント応答を手動で評価します。
 
@@ -62,6 +62,6 @@ Zava の店長や本部チームは、次のような質問に対して素早く
 - 店長・本部向けレポートを **標準化**
 - オンラインと店舗の在庫を連携し **オムニチャネル運用**を支援
 
-以降のセクションでは、AI Toolkit と Microsoft Foundry を使って Cora を構築・テスト・改善し、実ビジネスに向けた AI エージェントの作り方を学びます。
+以降のセクションでは、Foundry Toolkit と Microsoft Foundry を使って Cora を構築・テスト・改善し、実ビジネスに向けた AI エージェントの作り方を学びます。
 
 **Next** をクリックして、ワークショップ環境のセットアップに進みましょう。

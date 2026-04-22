@@ -1,11 +1,11 @@
-# モデル選択：AI Toolkit モデルカタログの探索
+# モデル選択：Foundry Toolkit モデルカタログの探索
 
-このセクションでは、AI Toolkit モデルカタログを使用して、マルチモーダルエージェントプロジェクトに適したモデルを検索、フィルタリング、比較します。モデルカタログでは、GitHub、Microsoft Foundry、OpenAI など、さまざまなプロバイダーのモデルにアクセスできます。
+このセクションでは、Foundry Toolkit モデルカタログを使用して、マルチモーダルエージェントプロジェクトに適したモデルを検索、フィルタリング、比較します。モデルカタログでは、GitHub、Microsoft Foundry、OpenAI など、さまざまなプロバイダーのモデルにアクセスできます。
 
 ## ステップ 1：フィルターを適用して選択肢を絞り込む
 
-1. 左サイドバーにある **AI Toolkit** 拡張機能のアイコンを見つけます
-2. AI Toolkit アイコンをクリックして拡張機能パネルを開きます
+1. 左サイドバーにある **Foundry Toolkit** 拡張機能のアイコンを見つけます
+2. Foundry Toolkit アイコンをクリックして拡張機能パネルを開きます
 3. **Developer Tools** の下にある **Discover** セクションを展開し、**Model Catalog** をクリックしてカタログインターフェースを開きます
 
 ![Model Catalog](../../img/model_catalog.png)
@@ -110,7 +110,7 @@ In Japanese, describe what's in this image and what kind of electrical component
 
 3. 画像ファイルを選択するためのブラウジングウィンドウが表示されます。以下のパスに移動します：
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 次に、**circuit_breaker.png** という名前のファイルを選択して **Open** をクリックします。
 ![Image File Path](../../img/image_file_path.png)

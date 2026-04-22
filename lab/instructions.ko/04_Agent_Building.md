@@ -1,10 +1,10 @@
 # 에이전트 구축: Agent Builder로 Zava 매장 운영(Store Ops) 에이전트 만들기
 
-이 섹션에서는 AI Toolkit의 Agent Builder를 사용해 Cora 에이전트를 만들고 도구를 추가하여, 사용자를 대신해 액션을 수행할 수 있도록 구성합니다. Agent Builder는 프롬프트 엔지니어링과 MCP 서버 등 도구 통합을 포함해 에이전트 구축을 위한 엔지니어링 워크플로를 간소화합니다.
+이 섹션에서는 Foundry Toolkit의 Agent Builder를 사용해 Cora 에이전트를 만들고 도구를 추가하여, 사용자를 대신해 액션을 수행할 수 있도록 구성합니다. Agent Builder는 프롬프트 엔지니어링과 MCP 서버 등 도구 통합을 포함해 에이전트 구축을 위한 엔지니어링 워크플로를 간소화합니다.
 
 ## Step 1: Agent Builder 살펴보기
 
-Agent Builder에 접근하려면 AI Toolkit 뷰에서 **Developer Tools** 아래의 **Build** 섹션을 찾습니다. 펼친 뒤 **Create Agent**를 클릭합니다. 다음으로 **Open Agent Builder**를 선택해 Visual Studio Code의 새 탭에서 Agent Builder 인터페이스를 엽니다.
+Agent Builder에 접근하려면 Foundry Toolkit 뷰에서 **Developer Tools** 아래의 **Build** 섹션을 찾습니다. 펼친 뒤 **Create Agent**를 클릭합니다. 다음으로 **Open Agent Builder**를 선택해 Visual Studio Code의 새 탭에서 Agent Builder 인터페이스를 엽니다.
 
 ![Create New Agent](../../img/create-new-agent.png)
 
@@ -155,7 +155,7 @@ Agent Builder로 돌아가서 **Tools** 옆의 **+** 아이콘을 선택해 도�
 이제 Cora 에이전트가 매장 운영을 위한 도구 호출을 수행하는지 테스트할 준비가 됐습니다. **Agent Builder** 탭의 오른쪽 채팅 패널에서 아래 경로에 있는 차단기 이미지를 첨부합니다.
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png
 ```
 
 그 다음 아래 텍스트 프롬프트를 전송합니다.

@@ -1,16 +1,16 @@
 @lab.Title
 # はじめに  
 >[!NOTE]
-> このワークショップは **75分** で構成されており、Visual Studio Code 上で AI Toolkit（AITK）と Microsoft Foundry を活用し、ビジネスシナリオに合わせたマルチモーダルエージェントをプロトタイピングする実践的な体験を提供します。
+> このワークショップは **75分** で構成されており、Visual Studio Code 上で Foundry Toolkit と Microsoft Foundry を活用し、ビジネスシナリオに合わせたマルチモーダルエージェントをプロトタイピングする実践的な体験を提供します。
 
 ## 学習目標  
 このワークショップを完了すると、以下のことができるようになります。
 
-• AITK モデルカタログでさまざまなモデルを探索・比較し、ユースケースに最適なモデルを選択できます。  
+• Foundry Toolkit モデルカタログでさまざまなモデルを探索・比較し、ユースケースに最適なモデルを選択できます。  
 
-• AITK Playground でプロンプトエンジニアリングとコンテキストデータを活用してモデルを強化し、より正確で根拠のある回答を生成できます。  
+• Foundry Toolkit Playground でプロンプトエンジニアリングとコンテキストデータを活用してモデルを強化し、より正確で根拠のある回答を生成できます。  
 
-• AITK Agent Builder を使用して、MCP（Model Context Protocol）ベースのツールと指示を組み合わせてエージェントをプロトタイピングできます。  
+• Foundry Toolkit Agent Builder を使用して、MCP（Model Context Protocol）ベースのツールと指示を組み合わせてエージェントをプロトタイピングできます。  
 
 ## リソース  
 > [!TIP]
@@ -18,16 +18,16 @@
 
 ## ラボの概要  
 
-このラボでは、Microsoft Foundry と AI Toolkit を使用したマルチモーダルエージェントのプロトタイピングプロセス全体を、4 つのセクションに分けて解説します。
+このラボでは、Microsoft Foundry と Foundry Toolkit を使用したマルチモーダルエージェントのプロトタイピングプロセス全体を、4 つのセクションに分けて解説します。
 
 1. **パート 1 - モデル選択**  
-   AI ソリューションを構築する際、モデルの選択は重要なステップです。このセクションでは、AI Toolkit のモデルカタログを探索し、ビジネスシナリオに最適なモデルを比較・選択します。
+   AI ソリューションを構築する際、モデルの選択は重要なステップです。このセクションでは、Foundry Toolkit のモデルカタログを探索し、ビジネスシナリオに最適なモデルを比較・選択します。
 
 2. **パート 2 - モデルの強化**  
    選択したモデルをプロンプトエンジニアリングとコンテキストデータで強化し、特定のユースケースにより適した性能と関連性を確保する方法を学びます。
 
 3. **パート 3 - エージェントのプロトタイピング**  
-   AITK Agent Builder を使用してエージェントをプロトタイピングします。選択・強化したモデルを MCP（Model Context Protocol）ベースのツールおよび指示と組み合わせます。
+  Foundry Toolkit Agent Builder を使用してエージェントをプロトタイピングします。選択・強化したモデルを MCP（Model Context Protocol）ベースのツールおよび指示と組み合わせます。
 
 4. **パート 4 - プロトタイプからコードへ**  
    最後に、プロトタイプを実際のアプリケーションに組み込めるコードとしてエクスポートする方法を学習します。
@@ -66,17 +66,17 @@ Zava の店舗マネージャーと本社チームは、以下のような質問
 • **レポートの標準化** - 店舗マネージャーと本社チーム間で一貫したレポーティング  
 • **マルチチャネル運営のサポート** - 店舗とオンライン間の在庫調整  
 
-このワークショップを通じて、AI Toolkit と Microsoft Foundry を使って Cora の機能を構築・テスト・改善し、実際のビジネスシナリオに適用可能な AI エージェントの作り方を習得します。
+このワークショップを通じて、Foundry Toolkit と Microsoft Foundry を使って Cora の機能を構築・テスト・改善し、実際のビジネスシナリオに適用可能な AI エージェントの作り方を習得します。
 
 
 ===
 # 01-はじめに
 
 > [!TIP] 
-> **AI Toolkit（AITK）とは？**  
-> AI Toolkit（AITK）は Visual Studio Code 用の拡張機能で、さまざまな AI モデルとサービスを一つの統合インターフェースで探索・操作できるツールです。  
+> **Foundry Toolkit とは？**  
+> Foundry Toolkit は Visual Studio Code 用の拡張機能で、さまざまな AI モデルとサービスを一つの統合インターフェースで探索・操作できるツールです。  
 > これにより、開発者は GitHub、Microsoft Foundry、ローカル環境など複数のプラットフォームにホストされたオープンソースおよび商用モデルを簡単に比較・活用できます。  
-> AITK は、モデル選択・プロンプトエンジニアリング・エージェントのプロトタイピングとテストをコードエディタ内で直接実行できるようにし、生成 AI 開発ワークフローを大幅に向上させます。
+> Foundry Toolkit は、モデル選択・プロンプトエンジニアリング・エージェントのプロトタイピングとテストをコードエディタ内で直接実行できるようにし、生成 AI 開発ワークフローを大幅に向上させます。
 
 ## Windows にログインする
 
@@ -92,7 +92,7 @@ Zava の店舗マネージャーと本社チームは、以下のような質問
 
 ## GitHub にログインする
 
-このワークショップでは、GitHub Enterprise（GHE）アカウントを使用して、AI Toolkit Model Catalog の GitHub ホステッドモデルと Visual Studio Code の GitHub Copilot 機能を活用します。
+このワークショップでは、GitHub Enterprise（GHE）アカウントを使用して、Foundry Toolkit Model Catalog の GitHub ホステッドモデルと Visual Studio Code の GitHub Copilot 機能を活用します。
 
 以下の手順に従って GitHub Enterprise（GHE）アカウントにログインし、このラボ用の Codespace を作成します。
 
@@ -130,8 +130,8 @@ VM にログインした後、画面下部のタスクバーにあるターミ�
 
 Visual Studio Code 環境には、すでに 2 つの拡張機能がインストールされているはずです。
 
-- **AI Toolkit**：このラボでさまざまな AI モデルおよびサービスと連携するために使用します。
-- **Microsoft Foundry 拡張機能**：AI Toolkit パッケージの一部としてインストールされ、Microsoft Foundry にホストされたモデルにアクセスできます。  
+- **Foundry Toolkit**：このラボでさまざまな AI モデルおよびサービスと連携するために使用します。
+- **Microsoft Foundry 拡張機能**：Foundry Toolkit パッケージの一部としてインストールされ、Microsoft Foundry にホストされたモデルにアクセスできます。  
   両拡張機能が正しくインストールされていれば、以下のスクリーンショットのように VS Code 左側サイドバーにアイコンが表示されます。
 
 ![Installed extensions](https://raw.githubusercontent.com/microsoft/aitour26-WRK540b-prototype-agents-with-the-ai-toolkit-and-model-context-protocol/main/img/installed_extensions.png)
@@ -182,7 +182,7 @@ VS Code に戻ると、使用する Foundry プロジェクトを選択するよ
 
 ## 準備完了
 
-VS Code で AI Toolkit と Microsoft Foundry モデルを使用する準備が整いました。  
+VS Code で Foundry Toolkit と Microsoft Foundry モデルを使用する準備が整いました。  
 次のステップでは、モデルカタログを探索し、モデルと対話してみましょう。
 
 **Next** をクリックして次のセクションに進んでください。
@@ -191,14 +191,14 @@ VS Code で AI Toolkit と Microsoft Foundry モデルを使用する準備が�
 ===
 # 02-モデル選択
 
-モデル選択：AI Toolkit Model Catalog の探索
+モデル選択：Foundry Toolkit Model Catalog の探索
 
-このセクションでは、AI Toolkit Model Catalog を探索して、マルチモーダルエージェントプロジェクトに使用するモデルを発見・絞り込み・比較する方法を学びます。  
+このセクションでは、Foundry Toolkit Model Catalog を探索して、マルチモーダルエージェントプロジェクトに使用するモデルを発見・絞り込み・比較する方法を学びます。  
 モデルカタログは、GitHub、Microsoft Foundry、OpenAI などさまざまなプロバイダーのモデルにアクセスできます。
 
 ## ステップ 1：フィルターを適用して選択肢を絞り込む
 
-1. 左サイドバーで **AI Toolkit** アイコンを探します。  
+1. 左サイドバーで **Foundry Toolkit** アイコンを探します。  
 2. アイコンをクリックして拡張パネルを開きます。  
 3. **Model Catalog** をクリックして、利用可能なモデルの一覧に移動します。
 
@@ -264,7 +264,7 @@ VS Code で AI Toolkit と Microsoft Foundry モデルを使用する準備が�
    **Allow** をクリックして、前のセクションで使用した同じ GitHub アカウントで認証します。
 
 > [!TIP]
-> ログイン後、AI Toolkit 拡張パネルの `GitHub` → `My Resources` から追加したモデルを確認できます。
+> ログイン後、Foundry Toolkit 拡張パネルの `GitHub` → `My Resources` から追加したモデルを確認できます。
 >
 > ![Model collection](https://raw.githubusercontent.com/microsoft/aitour26-WRK540b-prototype-agents-with-the-ai-toolkit-and-model-context-protocol/main/img/model_collection.png)
 >
@@ -360,7 +360,7 @@ Describe what's in this image and what kind of electrical component it appears t
 3. ファイルエクスプローラーが開いたら、アップロードする画像ファイルを選択するよう求められます。以下のパスに移動します。
 
 ```
-C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions 
+C:\Users\LabUser\aitour26-WRK542-prototype-agents-with-the-ai-toolkit-and-model-context-protocol\src\instructions\circuit_breaker.png 
 ```
 
 次に **circuit_breaker.png** ファイルを選択し、**Open** をクリックします。  
@@ -408,13 +408,13 @@ Copilot チャットウィンドウで以下のプロンプトを入力してみ
 I am exploring models for an AI agent that should support Zava - a DIY retailer with 20 stores across the United States and an online channel - on store operations and head office sales analysis. I am evaluating Mistral Small 3.1 and OpenAI GPT-4o. Which one would you recommend for this scenario, and why? Explain the trade-offs between models (e.g., reasoning ability, cost, latency, context length) so that I can make an informed choice. 
 ```
 
-これに対して Copilot は、AI Toolkit の **Get AI Model Guidance** ツールを呼び出し、ユースケースに基づいたモデルの推薦を提供します。  
+これに対して Copilot は、Foundry Toolkit の **Get AI Model Guidance** ツールを呼び出し、ユースケースに基づいたモデルの推薦を提供します。  
 応答には、ツール呼び出しの詳細を含む展開可能なセクションとともに、比較分析の結果が表示されます。
 
 ![Get AI model guidance](https://raw.githubusercontent.com/microsoft/aitour26-WRK540b-prototype-agents-with-the-ai-toolkit-and-model-context-protocol/main/img/get_ai_model_guidance.png)
 
 > [!NOTE]
-> GitHub Copilot が応答生成時に AI Toolkit ツールを自動的に呼び出さない場合は、チャットウィンドウに `#aitk` を入力して使用するツールを明示的に選択してから、プロンプトを送信できます。
+> GitHub Copilot が応答生成時に Foundry Toolkit ツールを自動的に呼び出さない場合は、チャットウィンドウに `#aitk` を入力して使用するツールを明示的に選択してから、プロンプトを送信できます。
 
 ## ステップ 6：Microsoft Foundry から選択したモデルを取得する
 
@@ -571,12 +571,12 @@ From the attached Zava product catalog, suggest a circuit breaker option that wo
 
 # エージェントの構築：Agent Builder を使用して Zava 店舗運営エージェント Cora を作成する
 
-このセクションでは、AI Toolkit の Agent Builder を使用して Cora エージェントを作成し、ユーザーに代わってタスクを実行できるようにツールを接続する方法を学びます。  
+このセクションでは、Foundry Toolkit の Agent Builder を使用して Cora エージェントを作成し、ユーザーに代わってタスクを実行できるようにツールを接続する方法を学びます。  
 Agent Builder は、プロンプトエンジニアリングや MCP サーバーなどのツール統合を含む、エージェント構築のためのエンジニアリングワークフローを効率化します。
 
 ## ステップ 1：Agent Builder を確認する
 
-AI Toolkit 画面で **Agent Builder** を選択してアクセスします。
+Foundry Toolkit 画面で **Agent Builder** を選択してアクセスします。
 
 ![Agent Builder](https://raw.githubusercontent.com/microsoft/aitour26-WRK540b-prototype-agents-with-the-ai-toolkit-and-model-context-protocol/main/img/agent-builder.png)
 
@@ -739,7 +739,7 @@ Visual Studio Code で **F5 を押して MCP サーバーを起動**し、両サ
 その後、`./.vscode/mcp.json` ファイルに移動し、各 Zava MCP サーバー名の上にある *Start* ボタンをクリックします。
 
 > [!WARNING]
-> GitHub Copilot Chat を以前に使用していた場合、**Restart** ボタンが表示されることがあります。その場合は Restart をクリックして、AI Toolkit がすでに実行中の MCP サーバーに接続できるようにしてください。
+> GitHub Copilot Chat を以前に使用していた場合、**Restart** ボタンが表示されることがあります。その場合は Restart をクリックして、Foundry Toolkit がすでに実行中の MCP サーバーに接続できるようにしてください。
 
 ---
 
@@ -840,9 +840,9 @@ Which stores have low stock on circuit breakers right now?
 
 # コードへの移行
 
-このセクションでは、AI Toolkit で作成したエージェントをコードベースのワークフローに移行する方法を学びます。
+このセクションでは、Foundry Toolkit で作成したエージェントをコードベースのワークフローに移行する方法を学びます。
 
-AI Toolkit は、Agent Builder で作成したエージェントのコードを自動生成します。希望する SDK とプログラミング言語を選択でき、生成されたコードファイルを自分のアプリケーションに統合できます。
+Foundry Toolkit は、Agent Builder で作成したエージェントのコードを自動生成します。希望する SDK とプログラミング言語を選択でき、生成されたコードファイルを自分のアプリケーションに統合できます。
 
 ---
 
@@ -1206,7 +1206,7 @@ Bellevue
 - MCP（Model Context Protocol）を通じてモデルとツールを組み合わせて社内向けエージェントをプロトタイピングする方法  
 - さらなるカスタマイズと実装のためにエージェントコードを抽出する方法  
 
-また、Visual Studio Code の AI Toolkit を活用して AI ベースのアプリケーションを効率的に開発する実践的な経験を積みました。
+また、Visual Studio Code の Foundry Toolkit を活用して AI ベースのアプリケーションを効率的に開発する実践的な経験を積みました。
 
 ---
 

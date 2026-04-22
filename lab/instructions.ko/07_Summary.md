@@ -7,7 +7,7 @@
 - MCP(Model Context Protocol)를 통해 모델과 지시문(instructions), 도구를 결합하여 내부용 에이전트를 프로토타이핑하기
 - 추가 커스터마이징 및 배포를 위해 에이전트 코드를 추출하기
 
-이 과정을 통해, AI-powered 애플리케이션 개발을 간소화하도록 설계된 Visual Studio Code의 AI Toolkit을 직접 사용해 보는 실습 경험도 쌓았습니다.
+이 과정을 통해, AI-powered 애플리케이션 개발을 간소화하도록 설계된 Visual Studio Code의 Foundry Toolkit을 직접 사용해 보는 실습 경험도 쌓았습니다.
 
 ## 다음 단계(Next steps)
 
