@@ -10,7 +10,7 @@ By the end of this workshop, you should be able to:
 - Explore and compare models in the Foundry Toolkit Model Catalog, to select the best fit for your use-case.
 - Augment models with prompts and data to get more accurate and grounded responses in the Foundry Toolkit Playground.
 - Prototype an agent by combining models and instructions with tools via MCP (Model Context Protocol) using the Foundry Toolkit Agent Builder.
-- Export your agent prototype into code using your preferred SDK and programming language for further customization and deployment.
+- Evaluate how an agent is performing against given metrics.
 
 ## Resources
 
