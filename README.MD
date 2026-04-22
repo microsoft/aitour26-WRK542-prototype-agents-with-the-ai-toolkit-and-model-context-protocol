@@ -4,7 +4,7 @@
 
 # [Microsoft AI Tour 2026](https://aitour.microsoft.com)
 
-## 🔥WRK542: Prototype Agents with the Foundry Toolkit and Model Context Protocol (MCP)
+## 🔥WRK542: Prototype agents with Foundry Toolkit and Model Context Protocol
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/Pwpvf3TWaw)](https://aka.ms/MicrosoftFoundryDiscord-AITour26)
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=adff2f&logoColor=fff)](https://aka.ms/MicrosoftFoundryForum-AITour26)
@@ -13,7 +13,7 @@ If you will be delivering this session, check the [session-delivery-sources](./s
 
 ### Session Description
 
-Learn how to build a conversational AI agent in VS Code using the Foundry Toolkit, Microsoft Foundry and the Model Context Protocol (MCP). You'll explore and compare models to find the best fit for your agent, configure its instructions and enable sales analysis and product inventory management.
+Learn how to build a conversational AI agent in VS Code using the Microsoft Foundry Toolkit and the Model Context Protocol (MCP). You'll explore and compare models to find the best fit for your agent, configure its instructions and enable sales analysis and product inventory management.
 
 ### 🧠 Learning Outcomes
 
