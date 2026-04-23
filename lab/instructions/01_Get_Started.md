@@ -29,6 +29,9 @@ Copy and paste the following command block into the terminal and press **Enter**
 ; code .
 ```
 
+> [!TIP]
+> **THEN PRESS THE ENTER KEY**
+
 > [!NOTE]
 > You'll get a warning about pasting multiple lines in the terminal. Click on **Paste anyway** to proceed.
 
