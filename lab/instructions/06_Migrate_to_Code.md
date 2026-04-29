@@ -15,15 +15,12 @@ In Agent Builder, click on the **View Code** button at the top right corner of t
 > [!Note]
 > Make sure you have saved your agent locally, as described in the previous section, otherwise you won't be able to see the **View Code** option.
 
-When prompted, select your preferred client SDK (e.g. *Microsoft Agent Framework*) and programming language (e.g. *Python*). Once the new file is created, save the file to your workspace (under 'src/cora-app.py').
+When prompted, select your preferred client SDK (e.g. *Microsoft Agent Framework*) and programming language (e.g. *Python*). Once the new file is created, save the file to your workspace (under **src/cora-app.py**).
 
-## Step 2: View the Code
+## Step 2: Run the Agent
 
-Review the generated file for placeholders or required changes.
-
-## Run the Agent
-
-If you'd like to run the code, save the file and follow the comments at the top. The exact steps depend on the SDK and language you selected.
+> [!Note]
+> The ***agent-framework*** has been installed in the lab environment.
 
 For example, if you selected the **Microsoft Agent Framework** SDK with **Python**, follow the instructions below:
 
@@ -35,41 +32,35 @@ For example, if you selected the **Microsoft Agent Framework** SDK with **Python
 
 3. Open a new terminal in Visual Studio Code by selecting **Terminal** -> **New Terminal** from the top menu.
 
-<!-- 4. Install the required dependencies by using:
+4. Authenticate to Azure:
 
-```
-pip install --no-deps agent-framework==1.0.0rc3 agent-framework-core==1.0.0rc3 agent-framework-azure-ai==1.0.0rc3
-``` -->
+    ```
+    az login
+    ```
 
-5. Authenticate to Azure:
+    You'll be prompted to open a browser window and fill in a code to complete the authentication. Once back in the terminal, press **Enter** to confirm the Azure subscription selection.
 
-```
-az login
-```
+5. Navigate to the directory where the code file is saved:
 
-You'll be prompted to open a browser window and fill in a code to complete the authentication. Once back in the terminal, press **Enter** to confirm the Azure subscription selection.
+    ```
+    cd src
+    ```
 
-6. Navigate to the directory where the code file is saved:
+6. Run the script using:
 
-```
-cd src
-```
+    ```
+    python cora-app.py
+    ```
 
-7. Run the script using:
+    > [!Tip]
+    > You might want to customize the user inputs to the agent in the script to test out different scenarios and see how the agent performs. Locate the 'USER_INPUTS' array definition in the script and modify the input values as needed. For example:
 
-```
-python cora-app.py
-```
-
-> [!Tip]
-> You might want to customize the user inputs to the agent in the script to test out different scenarios and see how the agent performs. Locate the 'USER_INPUTS' array definition in the script and modify the input values as needed. For example:
-
-```
-USER_INPUTS = [
-    "What are the top 5 best-selling products in the last month?",
-    "Which stores have low stock on circuit breakers right now?"
-]
-```
+    ```
+    USER_INPUTS = [
+        "What are the top 5 best-selling products in the last month?",
+        "Which stores have low stock on circuit breakers right now?"
+    ]
+    ```
 
 > [!NOTE]
 > Make sure the MCP servers are running before executing the script. If you followed the previous sections of the lab, the MCP servers should already be running locally on your machine.
