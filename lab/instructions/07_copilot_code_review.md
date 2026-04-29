@@ -41,7 +41,7 @@ Once sign-in is complete, the Copilot status in Visual Studio Code should no lon
 
 Now that Copilot is enabled, use it to understand the generated agent script.
 
-1. Open `src/cora-app.py` in Visual Studio Code.
+1. Open **src/cora-app.py** in Visual Studio Code.
 
 	> [!NOTE]
 	> If you have not completed the previous section yet, return to **Bonus: Migrate to Code** and generate the agent code before continuing.
@@ -54,7 +54,7 @@ Now that Copilot is enabled, use it to understand the generated agent script.
 
 	![GitHub Copilot Chat in Ask mode.](../../img/ghcp-ask-mode.png)
 
-1. Make sure `cora-app.py` is included as context for the chat. If you see a `+` icon beside the file name, click it to add the file as context.
+1. Make sure **cora-app.py** is included as context for the chat. If you see a `+` icon beside the file name, click it to add the file as context.
 
 	![Suggested file as context](../../img/suggested_file_context.png)
 
