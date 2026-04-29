@@ -2,31 +2,112 @@
 #    uv pip compile requirements.in --universal -o requirements.lock.txt
 -e ./shared
     # via -r requirements.in
-agent-framework-core==1.0.1
-    # via
-    #   -r requirements.in
-    #   agent-framework-foundry
-    #   agent-framework-openai
-agent-framework-foundry==1.0.1
+a2a-sdk==0.3.23
+    # via agent-framework-a2a
+ag-ui-protocol==0.1.18
+    # via agent-framework-ag-ui
+agent-framework==1.2.1
     # via -r requirements.in
-agent-framework-openai==1.0.1
-    # via agent-framework-foundry
+agent-framework-a2a==1.0.0b260428
+    # via agent-framework-core
+agent-framework-ag-ui==1.0.0b260311
+    # via agent-framework-core
+agent-framework-anthropic==1.0.0b260428
+    # via agent-framework-core
+agent-framework-azure-ai-search==0.0.0a1
+    # via agent-framework-core
+agent-framework-azure-cosmos==1.0.0b260428
+    # via agent-framework-core
+agent-framework-azurefunctions==1.0.0b260428
+    # via agent-framework-core
+agent-framework-bedrock==1.0.0b260428
+    # via agent-framework-core
+agent-framework-chatkit==1.0.0b260428
+    # via agent-framework-core
+agent-framework-claude==1.0.0b260428
+    # via agent-framework-core
+agent-framework-copilotstudio==1.0.0b260428
+    # via agent-framework-core
+agent-framework-core==1.2.1
+    # via
+    #   agent-framework
+    #   agent-framework-a2a
+    #   agent-framework-ag-ui
+    #   agent-framework-anthropic
+    #   agent-framework-azure-cosmos
+    #   agent-framework-azurefunctions
+    #   agent-framework-bedrock
+    #   agent-framework-chatkit
+    #   agent-framework-claude
+    #   agent-framework-copilotstudio
+    #   agent-framework-declarative
+    #   agent-framework-devui
+    #   agent-framework-durabletask
+    #   agent-framework-foundry
+    #   agent-framework-foundry-local
+    #   agent-framework-github-copilot
+    #   agent-framework-lab
+    #   agent-framework-mem0
+    #   agent-framework-ollama
+    #   agent-framework-openai
+    #   agent-framework-orchestrations
+    #   agent-framework-purview
+    #   agent-framework-redis
+agent-framework-declarative==1.0.0b260428
+    # via agent-framework-core
+agent-framework-devui==1.0.0b260311
+    # via agent-framework-core
+agent-framework-durabletask==1.0.0b260428
+    # via
+    #   agent-framework-azurefunctions
+    #   agent-framework-core
+agent-framework-foundry==1.0.1
+    # via agent-framework-core
+agent-framework-foundry-local==1.0.0b260428
+    # via agent-framework-core
+agent-framework-github-copilot==1.0.0b260428
+    # via agent-framework-core
+agent-framework-lab==1.0.0b251024
+    # via agent-framework-core
+agent-framework-mem0==1.0.0b260428
+    # via agent-framework-core
+agent-framework-ollama==1.0.0b260428
+    # via agent-framework-core
+agent-framework-openai==1.2.1
+    # via
+    #   agent-framework-core
+    #   agent-framework-foundry
+    #   agent-framework-foundry-local
+agent-framework-orchestrations==1.0.0b260428
+    # via agent-framework-core
+agent-framework-purview==1.0.0b260428
+    # via agent-framework-core
+agent-framework-redis==1.0.0b260428
+    # via agent-framework-core
 aiofile==3.9.0
     # via py-key-value-aio
 aiohappyeyeballs==2.6.1
     # via aiohttp
 aiohttp==3.13.5
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   azure-functions-durable
 aiosignal==1.4.0
     # via aiohttp
 aiosqlite==0.20.0
     # via
     #   -r requirements.in
     #   zava-shop-shared
+annotated-doc==0.0.4
+    # via fastapi
 annotated-types==0.7.0
     # via pydantic
+anthropic==0.80.0
+    # via agent-framework-anthropic
 anyio==4.13.0
     # via
+    #   anthropic
+    #   claude-agent-sdk
     #   httpx
     #   mcp
     #   openai
@@ -34,6 +115,8 @@ anyio==4.13.0
     #   sse-starlette
     #   starlette
     #   watchfiles
+asyncio==4.0.0
+    # via durabletask
 attrs==24.3.0
     # via
     #   -r requirements.in
@@ -49,20 +132,41 @@ azure-ai-projects==2.0.1
     # via agent-framework-foundry
 azure-core==1.39.0
     # via
+    #   agent-framework-purview
     #   azure-ai-inference
     #   azure-ai-projects
+    #   azure-cosmos
     #   azure-identity
     #   azure-storage-blob
+    #   microsoft-agents-hosting-core
+azure-cosmos==4.15.0
+    # via agent-framework-azure-cosmos
+azure-functions==1.24.0
+    # via
+    #   agent-framework-azurefunctions
+    #   azure-functions-durable
+azure-functions-durable==1.5.0
+    # via agent-framework-azurefunctions
 azure-identity==1.25.3
     # via
     #   -r requirements.in
     #   azure-ai-projects
+    #   durabletask-azuremanaged
 azure-storage-blob==12.28.0
     # via azure-ai-projects
+backoff==2.2.1
+    # via posthog
 beartype==0.22.9
     # via py-key-value-aio
 black==26.3.1
     # via -r requirements.in
+boto3==1.42.97
+    # via agent-framework-bedrock
+botocore==1.42.97
+    # via
+    #   agent-framework-bedrock
+    #   boto3
+    #   s3transfer
 cachetools==7.0.5
     # via py-key-value-aio
 caio==0.9.25
@@ -78,6 +182,8 @@ cfgv==3.5.0
     # via pre-commit
 charset-normalizer==3.4.7
     # via requests
+claude-agent-sdk==0.1.48
+    # via agent-framework-claude
 click==8.3.2
     # via
     #   black
@@ -87,6 +193,7 @@ colorama==0.4.6 ; sys_platform == 'win32'
     #   click
     #   pytest
     #   tqdm
+    #   uvicorn
 coverage==7.13.5
     # via pytest-cov
 cryptography==46.0.7
@@ -94,6 +201,7 @@ cryptography==46.0.7
     #   authlib
     #   azure-identity
     #   azure-storage-blob
+    #   google-auth
     #   msal
     #   pyjwt
     #   secretstorage
@@ -102,45 +210,94 @@ cyclopts==4.10.2
 distlib==0.4.0
     # via virtualenv
 distro==1.9.0
-    # via openai
+    # via
+    #   anthropic
+    #   openai
+    #   posthog
 dnspython==2.8.0
     # via email-validator
 docstring-parser==0.18.0
-    # via cyclopts
+    # via
+    #   anthropic
+    #   cyclopts
 docutils==0.22.4
     # via rich-rst
+durabletask==1.4.0
+    # via
+    #   agent-framework-durabletask
+    #   durabletask-azuremanaged
+durabletask-azuremanaged==1.4.0
+    # via agent-framework-durabletask
 email-validator==2.3.0
     # via pydantic
 exceptiongroup==1.3.1
     # via fastmcp
+fastapi==0.136.1
+    # via
+    #   agent-framework-ag-ui
+    #   agent-framework-devui
 fastmcp==3.2.4
     # via -r requirements.in
 filelock==3.28.0
     # via
     #   python-discovery
     #   virtualenv
+foundry-local-sdk==0.5.1
+    # via agent-framework-foundry-local
 frozenlist==1.8.0
     # via
     #   aiohttp
     #   aiosignal
+furl==2.1.4
+    # via azure-functions-durable
+github-copilot-sdk==0.2.1
+    # via agent-framework-github-copilot
+google-api-core==2.30.3
+    # via a2a-sdk
+google-auth==2.49.2
+    # via google-api-core
+googleapis-common-protos==1.74.0
+    # via google-api-core
 greenlet==3.4.0
     # via sqlalchemy
 griffelib==2.0.2
-    # via fastmcp
+    # via
+    #   fastmcp
+    #   openai-agents
+grpcio==1.80.0
+    # via
+    #   durabletask
+    #   qdrant-client
 h11==0.16.0
     # via
     #   httpcore
     #   uvicorn
+h2==4.3.0
+    # via httpx
+hpack==4.1.0
+    # via h2
 httpcore==1.0.9
     # via httpx
+httptools==0.7.1
+    # via uvicorn
 httpx==0.28.1
     # via
     #   -r requirements.in
+    #   a2a-sdk
+    #   agent-framework-purview
+    #   anthropic
     #   fastmcp
+    #   foundry-local-sdk
     #   mcp
+    #   ollama
     #   openai
+    #   qdrant-client
 httpx-sse==0.4.3
-    # via mcp
+    # via
+    #   a2a-sdk
+    #   mcp
+hyperframe==6.1.0
+    # via h2
 identify==2.6.19
     # via pre-commit
 idna==3.11
@@ -159,6 +316,7 @@ isodate==0.7.2
     #   azure-ai-inference
     #   azure-ai-projects
     #   azure-storage-blob
+    #   microsoft-agents-hosting-core
 jaraco-classes==3.4.0
     # via keyring
 jaraco-context==6.1.2
@@ -169,8 +327,18 @@ jeepney==0.9.0 ; sys_platform == 'linux'
     # via
     #   keyring
     #   secretstorage
+jinja2==3.1.6
+    # via openai-chatkit
 jiter==0.14.0
-    # via openai
+    # via
+    #   anthropic
+    #   openai
+jmespath==1.1.0
+    # via
+    #   boto3
+    #   botocore
+jsonpath-ng==1.8.0
+    # via redisvl
 jsonref==1.1.0
     # via fastmcp
 jsonschema==4.26.0
@@ -183,12 +351,29 @@ keyring==25.7.0
     # via py-key-value-aio
 markdown-it-py==4.0.0
     # via rich
+markupsafe==3.0.3
+    # via
+    #   jinja2
+    #   werkzeug
 mcp==1.27.0
     # via
     #   -r requirements.in
+    #   agent-framework-core
+    #   claude-agent-sdk
     #   fastmcp
+    #   openai-agents
 mdurl==0.1.2
     # via markdown-it-py
+mem0ai==1.0.11
+    # via agent-framework-mem0
+microsoft-agents-activity==0.3.1
+    # via microsoft-agents-hosting-core
+microsoft-agents-copilotstudio-client==0.3.1
+    # via agent-framework-copilotstudio
+microsoft-agents-hosting-core==0.3.1
+    # via microsoft-agents-copilotstudio-client
+ml-dtypes==0.5.4
+    # via redisvl
 more-itertools==11.0.2
     # via
     #   jaraco-classes
@@ -207,20 +392,45 @@ mypy-extensions==1.1.0
     # via black
 nodeenv==1.10.0
     # via pre-commit
+numpy==2.4.4
+    # via
+    #   agent-framework-redis
+    #   ml-dtypes
+    #   qdrant-client
+    #   redisvl
+ollama==0.5.3
+    # via agent-framework-ollama
 openai==2.32.0
     # via
     #   -r requirements.in
     #   agent-framework-openai
     #   azure-ai-projects
+    #   mem0ai
+    #   openai-agents
+    #   openai-chatkit
+openai-agents==0.14.8
+    # via openai-chatkit
+openai-chatkit==1.6.3
+    # via agent-framework-chatkit
 openapi-pydantic==0.5.1
     # via fastmcp
 opentelemetry-api==1.41.0
     # via
     #   agent-framework-core
+    #   azure-functions-durable
     #   fastmcp
+    #   opentelemetry-sdk
+    #   opentelemetry-semantic-conventions
+opentelemetry-sdk==1.41.0
+    # via azure-functions-durable
+opentelemetry-semantic-conventions==0.62b0
+    # via opentelemetry-sdk
+orderedmultidict==1.0.2
+    # via furl
 packaging==26.1
     # via
     #   black
+    #   durabletask
     #   fastmcp
     #   pytest
 pathable==0.5.0
@@ -237,25 +447,57 @@ pluggy==1.6.0
     # via
     #   pytest
     #   pytest-cov
+portalocker==3.2.0
+    # via qdrant-client
+posthog==7.13.1
+    # via mem0ai
 pre-commit==4.5.1
     # via -r requirements.in
 propcache==0.4.1
     # via
     #   aiohttp
     #   yarl
+proto-plus==1.27.2
+    # via google-api-core
+protobuf==6.33.6
+    # via
+    #   a2a-sdk
+    #   durabletask
+    #   google-api-core
+    #   googleapis-common-protos
+    #   mem0ai
+    #   proto-plus
+    #   qdrant-client
 py-key-value-aio==0.4.4
     # via fastmcp
+pyasn1==0.6.3
+    # via pyasn1-modules
+pyasn1-modules==0.4.2
+    # via google-auth
 pycparser==3.0 ; implementation_name != 'PyPy' and platform_python_implementation != 'PyPy'
     # via cffi
 pydantic==2.13.2
     # via
     #   -r requirements.in
+    #   a2a-sdk
+    #   ag-ui-protocol
     #   agent-framework-core
+    #   anthropic
+    #   fastapi
     #   fastmcp
+    #   foundry-local-sdk
+    #   github-copilot-sdk
     #   mcp
+    #   mem0ai
+    #   microsoft-agents-activity
+    #   ollama
     #   openai
+    #   openai-agents
+    #   openai-chatkit
     #   openapi-pydantic
     #   pydantic-settings
+    #   qdrant-client
+    #   redisvl
     #   zava-shop-shared
 pydantic-core==2.46.2
     # via pydantic
@@ -268,6 +510,7 @@ pygments==2.20.0
 pyjwt==2.12.1
     # via
     #   mcp
+    #   microsoft-agents-hosting-core
     #   msal
 pyperclip==1.11.0
     # via fastmcp
@@ -280,27 +523,54 @@ pytest-asyncio==1.3.0
     # via -r requirements.in
 pytest-cov==7.1.0
     # via -r requirements.in
+python-dateutil==2.9.0.post0
+    # via
+    #   agent-framework-durabletask
+    #   azure-functions-durable
+    #   botocore
+    #   github-copilot-sdk
+    #   posthog
 python-discovery==1.2.2
     # via virtualenv
 python-dotenv==1.2.2
     # via
     #   -r requirements.in
     #   agent-framework-core
+    #   agent-framework-devui
     #   fastmcp
+    #   microsoft-agents-hosting-core
     #   pydantic-settings
+    #   uvicorn
 python-multipart==0.0.26
     # via mcp
+python-ulid==3.1.0
+    # via redisvl
 pytokens==0.4.1
     # via black
+pytz==2026.1.post1
+    # via mem0ai
 pywin32==311 ; sys_platform == 'win32'
-    # via mcp
+    # via
+    #   mcp
+    #   portalocker
 pywin32-ctypes==0.2.3 ; sys_platform == 'win32'
     # via keyring
 pyyaml==6.0.3
     # via
+    #   agent-framework-declarative
     #   fastmcp
     #   jsonschema-path
     #   pre-commit
+    #   redisvl
+    #   uvicorn
+qdrant-client==1.17.1
+    # via mem0ai
+redis==7.1.1
+    # via
+    #   agent-framework-redis
+    #   redisvl
+redisvl==0.15.0
+    # via agent-framework-redis
 referencing==0.35.1
     # via
     #   -r requirements.in
@@ -310,7 +580,11 @@ referencing==0.35.1
 requests==2.33.1
     # via
     #   azure-core
+    #   azure-functions-durable
+    #   google-api-core
     #   msal
+    #   openai-agents
+    #   posthog
 rich==15.0.0
     # via
     #   cyclopts
@@ -324,35 +598,60 @@ rpds-py==0.30.0
     #   referencing
 ruff==0.15.11
     # via -r requirements.in
+s3transfer==0.16.1
+    # via boto3
 secretstorage==3.5.0 ; sys_platform == 'linux'
     # via keyring
+six==1.17.0
+    # via
+    #   furl
+    #   orderedmultidict
+    #   python-dateutil
 sniffio==1.3.1
-    # via openai
+    # via
+    #   anthropic
+    #   openai
 sqlalchemy==2.0.49
     # via
     #   -r requirements.in
+    #   mem0ai
     #   zava-shop-shared
 sse-starlette==3.3.4
     # via mcp
 starlette==1.0.0
     # via
     #   -r requirements.in
+    #   fastapi
     #   mcp
     #   sse-starlette
+tenacity==9.1.4
+    # via redisvl
 tqdm==4.67.3
-    # via openai
+    # via
+    #   foundry-local-sdk
+    #   openai
+types-requests==2.33.0.20260408
+    # via openai-agents
 typing-extensions==4.15.0
     # via
     #   agent-framework-core
     #   aiosqlite
+    #   anthropic
     #   azure-ai-inference
     #   azure-ai-projects
     #   azure-core
+    #   azure-cosmos
     #   azure-identity
     #   azure-storage-blob
+    #   fastapi
+    #   grpcio
     #   mcp
     #   openai
+    #   openai-agents
     #   opentelemetry-api
+    #   opentelemetry-sdk
+    #   opentelemetry-semantic-conventions
+    #   posthog
     #   py-key-value-aio
     #   pydantic
     #   pydantic-core
@@ -360,24 +659,41 @@ typing-extensions==4.15.0
     #   typing-inspection
 typing-inspection==0.4.2
     # via
+    #   fastapi
     #   mcp
     #   pydantic
     #   pydantic-settings
 uncalled-for==0.3.1
     # via fastmcp
 urllib3==2.6.3
-    # via requests
+    # via
+    #   botocore
+    #   qdrant-client
+    #   requests
+    #   types-requests
 uvicorn==0.44.0
     # via
     #   -r requirements.in
+    #   agent-framework-ag-ui
+    #   agent-framework-devui
     #   fastmcp
     #   mcp
+    #   openai-chatkit
+uvloop==0.22.1 ; platform_python_implementation != 'PyPy' and sys_platform != 'cygwin' and sys_platform != 'win32'
+    # via uvicorn
 virtualenv==21.2.4
     # via pre-commit
 watchfiles==1.1.1
-    # via fastmcp
+    # via
+    #   fastmcp
+    #   uvicorn
 websockets==16.0
-    # via fastmcp
+    # via
+    #   fastmcp
+    #   openai-agents
+    #   uvicorn
+werkzeug==3.1.8
+    # via azure-functions
 yarl==1.23.0
     # via aiohttp
 zipp==3.23.1

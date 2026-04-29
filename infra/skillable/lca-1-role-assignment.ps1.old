@@ -4,14 +4,10 @@
 
 $subId   = "@lab.CloudSubscription.Id"
 $username = "@lab.CloudPortalCredential(User1).Username"
-$resourceGroup = "@lab.CloudResourceGroup(rg-ai-toolkit-mcp).Name"
-$foundryAgentRoleId = "f6c7c914-8db3-469d-8ca1-694a8f32e121"
-$resourceGroupScope = "/subscriptions/$subId/resourceGroups/$resourceGroup"
 
 # Print subid and username
 Write-Host "Subscription ID: $subId"
 Write-Host "Username: $username"
-Write-Host "Resource Group: $resourceGroup"
 
 function Invoke-WithRetry {
     param (
@@ -41,29 +37,11 @@ function Invoke-WithRetry {
 
 # Assign roles with retries
 Invoke-WithRetry { 
-    New-AzRoleAssignment -SignInName $username -RoleDefinitionName "Azure AI Developer" -Scope $resourceGroupScope
+    New-AzRoleAssignment -SignInName $username -RoleDefinitionName "Azure AI Developer" -Scope "/subscriptions/$subId/resourceGroups/rg-ai-toolkit-mcp"
     Write-Host "Assigned 'Azure AI Developer' role to resource group."
-}
-
-# Grants the Foundry agent data-plane role required to create agents in AI Foundry.
-Invoke-WithRetry {
-    $user = Get-AzADUser -UserPrincipalName $username
-    if (-not $user -or [string]::IsNullOrWhiteSpace($user.Id)) {
-        throw "Unable to resolve object ID for user '$username'."
-    }
-
-    $existingAssignment = Get-AzRoleAssignment -ObjectId $user.Id -RoleDefinitionId $foundryAgentRoleId -Scope $resourceGroupScope -ErrorAction SilentlyContinue
-    if ($existingAssignment) {
-        Write-Host "Foundry agent role assignment already exists."
-        return
-    }
-
-    New-AzRoleAssignment -ObjectId $user.Id -RoleDefinitionId $foundryAgentRoleId -Scope $resourceGroupScope
-    Write-Host "Assigned Foundry agent role '$foundryAgentRoleId' to resource group."
 }
 
 Invoke-WithRetry { 
     New-AzRoleAssignment -SignInName $username -RoleDefinitionName "Cognitive Services User" -Scope "/subscriptions/$subId"
     Write-Host "Assigned 'Cognitive Services User' role to subscription."
 }
-

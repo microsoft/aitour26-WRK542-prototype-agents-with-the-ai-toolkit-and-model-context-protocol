@@ -13,6 +13,7 @@ The deployment is fully automated through Skillable Life Cycle Actions (LCAs) th
    - **Purpose**: Assigns necessary Azure roles to the lab user
    - **Actions**:
      - Assigns "Azure AI Developer" role to the resource group
+      - Assigns the Foundry agent role required for agent creation to the resource group
      - Assigns "Cognitive Services User" role to the subscription
      - Uses retry logic to handle transient Azure API failures
 

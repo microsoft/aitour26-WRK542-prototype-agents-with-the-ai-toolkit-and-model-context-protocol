@@ -1,8 +1,8 @@
 # Build requirements process
 
 # 1. Update the `requirements.in` file with libraries and specify version ranges.
-# 2. Install pip tools `pip install pip-tools`.
-# 3. Compile the requirements by running `pip-compile -r requirements.in -o requirements.lock.txt`.
+# 2. Install uv if needed: `pip install uv`.
+# 3. Compile the platform-neutral requirements by running `uv pip compile requirements.in --universal -o requirements.lock.txt`.
 
 ## Local Packages (install in editable mode)
 -e ./shared
@@ -20,9 +20,7 @@ python-dotenv>=1.0.0
 mcp>=1.0.0
 
 ## Agent Framework
-# agent-framework==1.0.1
-agent-framework-core==1.0.1
-agent-framework-foundry==1.0.1
+agent-framework==1.2.1
 
 ## Web Framework (used by FastMCP)
 starlette>=0.27.0
