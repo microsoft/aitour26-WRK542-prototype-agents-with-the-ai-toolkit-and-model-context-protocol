@@ -2,7 +2,27 @@
 
 In this section, you'll create the Cora agent in Agent Builder, define its instructions, and connect it to MCP tools so it can take real actions on behalf of users.
 
-## Step 1: Explore Agent Builder
+## Step 1: Start the MCP servers
+
+> [!NOTE]
+> [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) is a powerful, standardized framework that optimizes communication between Large Language Models (LLMs) and external tools, applications, and data sources.
+
+Earlier in the **Model Augmentation** exercise, we added grounding data to the model in the form of a file attachment. While that may be convenient for quick testing, store operations requires live data (sales and inventory) that changes over time.
+
+To address that, we'll connect Cora to two MCP servers configured for this workshop:
+
+- **Sales Analysis MCP server** (sales metrics + semantic product search)
+- **Inventory MCP server** (stock levels + safe transfers)
+
+In Visual Studio Code, start the servers by selecting **Terminal > Run Task... > Start MCP Servers**.
+
+![Start MCP Servers](../../img/start-mcp-servers.png)
+
+You should see two new terminal windows open, one for each server. Double check that you get the message `Uvicorn is running on port XXXX` in both terminal windows, indicating that the servers are running.
+
+![MCP Servers running](../../img/mcp_servers_running.png)
+
+## Step 2: Explore Agent Builder
 
 To access Agent Builder, in the Foundry Toolkit view, locate the **Build** section under **Developer Tools**. Expand it and click on **Create Agent**. Next, select **Open Agent Builder** to open the Agent Builder interface in a new tab within Visual Studio Code.
 
@@ -15,11 +35,11 @@ Agent Builder's UI is organized into two sections. The left side of Agent Builde
 > [!NOTE]
 > The Evaluation features are only available once you've defined a variable within your agent's Instructions. Evaluations are further explored in the Bonus section of this lab.
 
-## Step 2: Create the Agent
+## Step 3: Create the Agent
 
 Let's create Zava's Cora agent! Within the **Agent name** field, enter **Cora**. For the agent's **Model**, select the **gpt-5.3-chat (via Microsoft Foundry)** model instance.
 
-## Step 3: Provide Instructions for the Agent
+## Step 4: Provide Instructions for the Agent
 
 Similarly to what we've previously done in the Model Playground, we'll now need to define the behavior of the agent, through the system prompt.
 
@@ -103,26 +123,6 @@ You must analyze the user's intent to select the correct tool workflow:
 ```
 
 These instructions define how Cora should handle sales analysis, inventory checks, and safe transfers. Next, you'll connect the required sales and inventory data.
-
-## Step 4: Start the MCP server
-
-> [!NOTE]
- > [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) is a powerful, standardized framework that optimizes communication between Large Language Models (LLMs) and external tools, applications, and data sources.
-
-Earlier in the **Model Augmentation** exercise, we added grounding data to the model in the form of a file attachment. While that may be convenient for quick testing, store operations requires live data (sales and inventory) that changes over time.
-
-To address that, we'll connect Cora to two MCP servers configured for this workshop:
-
-- **Sales Analysis MCP server** (sales metrics + semantic product search)
-- **Inventory MCP server** (stock levels + safe transfers)
-
-In Visual Studio Code, start the servers by selecting **Terminal > Run Task... > Start MCP Servers**.
-
-![Start MCP Servers](../../img/start-mcp-servers.png)
-
-You should see two new terminal windows open, one for each server. Double check that you get the message `Uvicorn is running on port XXXX` in both terminal windows, indicating that the servers are running.
-
-![MCP Servers running](../../img/mcp_servers_running.png)
 
 ## Step 5: Add the MCP Server Sales Tools to the Agent
 
