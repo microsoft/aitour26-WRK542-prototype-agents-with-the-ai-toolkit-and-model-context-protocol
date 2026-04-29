@@ -2,10 +2,16 @@
 
 In this section, you will use GitHub Copilot Chat in Visual Studio Code to review and understand the agent code you generated in the previous exercise.
 
-Before you can use Copilot Chat, sign in with the same GitHub Enterprise (GHE) account you used earlier in the Edge browser. Use the lab credentials from the **Resources tab**:
+## Authenticate with GitHub
 
-- Username: +++@lab.CloudPortalCredential(User1).Username+++
-- TAP: +++@lab.CloudPortalCredential(User1).TAP+++
+1. Open Edge Web Browser, it's pinned to the Windows Task Bar.
+2. Select Continue.
+3. You'll be prompted to authenticate. Use the following lab credentials:
+
+   - Username: +++@lab.CloudPortalCredential(User1).Username+++
+   - TAP: +++@lab.CloudPortalCredential(User1).TAP+++
+  
+4. Select **Yes** to Stay signed in.
 
 ## Enable GitHub Copilot AI Features
 
